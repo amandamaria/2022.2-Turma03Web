@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>EXERCICIO 01</title>
+  </head>
+
+  <body>
+    <h1> EXERCICIOS IMD - 01 </h1>
+    <script>
+      var numero1 = parseInt(prompt("DIGITE UM NÚMERO"));
+      var resultado = numero1 % 10;
+      alert(resultado)
+    </script>
+  </body>
+</html>
