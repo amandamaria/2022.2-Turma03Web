@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Semana 01 - Exercício 5</title>
+</head>
+<body>
+    <h1> Cálculo de área</h1>
+    Digite a largura do ambiente: <input type="number" name="largura" id="larg">
+    Digite a profundidade do ambiente: <input type="number" name="profundidade" id="prof"> 
+    <button type="button" onclick="area()">Calcular área do ambiente</button>
+    <p id = "areacalculada">Área do ambiente</p>
+<script>
+    function area() {
+    var tlarg =  document.getElementById("larg");
+    var tprof =  document.getElementById("prof");
+    var largura = Number(tlarg.value);
+    var profundidade = Number(tprof.value);
+    var area = largura * profundidade;
+    document.getElementById("areacalculada").innerHTML = "O ambiente possui largura de" + largura + "e profundidade de" + profundidade + ", totalizando" + area + " metros quadrados.";
+    }
+</script>
+</body>
+</html>

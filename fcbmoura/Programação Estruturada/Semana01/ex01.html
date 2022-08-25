@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Semana 01 - Exercício 1</title>
+</head>
+<body>
+    <h1> Soma de dois números</h1>
+    Primeiro núnero: <input type="number" name="tnum1" id="num1">
+    Segundo número: <input type="number" name="tnum2" id="num2"> 
+    <button type="button" onclick="soma()">Calcular soma</button>
+    <p id = "resultado">Resultado</p>
+<script>
+    function soma() {
+    var tn1 =  document.getElementById("num1");
+    var tn2 =  document.getElementById("num2");
+    var n1 = Number(tn1.value);
+    var n2 = Number(tn2.value);
+    var s = n1 + n2;
+    resultado.innerHTML = s;
+    }
+</script>
+</body>
+</html>
