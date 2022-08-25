@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Programação Estruturada</title>
+</head>
+
+<body>
+  <label for="number">Número</label>
+  <input type="number" name="number" id="number" placeholder="Insira um número">
+
+  <button id="btn" onclick="getLastDigit()">Calcular</button>
+  
+  <p><strong>O último dígito do número informado é:</strong><span id="resultado"></span></p>
+
+  <script>
+       function getLastDigit() {
+      const number = Number(document.getElementById('number').value)
+    
+      const resultado = document.getElementById('resultado')
+
+      alert(`O último dígito do número indormado é: ${number % 10}`)
+      
+      return resultado.innerHTML = `O último dígito do número indormado é: ${number % 10}`  
+    } 
+  </script>
+
+</body>
+
+</html>

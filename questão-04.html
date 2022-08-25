@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Programação Estruturada</title>
+</head>
+
+<body>
+  <label for="a">Primeiro número</label>
+  <input type="number" name="a" id="a" placeholder="nº 1">
+  <label for="b">Segundo número</label>
+  <input type="number" name="a" id="b" placeholder="nº 2">
+
+  <button id="btn" onclick="weightedAverage()">Calcular</button>
+  
+  <p><strong>A média ponderada dos números informados é:</strong> <span id="resultado"></span></p>
+
+  <script>
+       function weightedAverage() {
+      const a = Number(document.getElementById('a').value)
+      const b = Number(document.getElementById('b').value)
+      const resultado = document.getElementById('resultado')
+
+      alert(`A média ponderada dos números informados é: ${(a * 2 + b * 3) / 5}`)
+      
+      return resultado.innerHTML = ` ${(a * 2 + b * 3) / 5}`   
+    } 
+  </script>
+
+</body>
+
+</html>

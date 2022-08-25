@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Programação Estruturada</title>
+</head>
+
+<body>
+  <label for="a">Primeiro número</label>
+  <input type="number" name="a" id="a" placeholder="nº 1">
+  <label for="b">Segundo número</label>
+  <input type="number" name="a" id="b" placeholder="nº 2">
+
+  <button id="btn" onclick="average()">Calcular</button>
+  
+  <p><strong>A média dos números informados é:</strong> <span id="resultado"></span></p>
+
+  <script>
+       function average() {
+      const a = Number(document.getElementById('a').value)
+      const b = Number(document.getElementById('b').value)
+      const resultado = document.getElementById('resultado')
+
+      alert(`A média dos números informados é: ${(a + b) / 2}`)
+      
+      return resultado.innerHTML = ` ${(a + b) / 2}`   
+    } 
+  </script>
+
+</body>
+
+</html>
