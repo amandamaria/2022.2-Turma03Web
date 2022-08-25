@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Programação Estruturada</title>
+</head>
+
+<body>
+  <label for="x">Largura</label>
+  <input type="number" name="x" id="x" placeholder="Insira a largura">
+  <label for="y">Profundidade</label>
+  <input type="number" name="y" id="y" placeholder="Insira a profundidade">
+
+  <button id="btn" onclick="area()">Calcular</button>
+  
+  <p><span id="resultado"></span></p>
+
+  <script>
+       function area() {
+      const x = Number(document.getElementById('x').value)
+      const y = Number(document.getElementById('y').value)
+      const resultado = document.getElementById('resultado')
+
+      alert(`O ambiente possui largura de ${x} e profundidade de ${y}, totalizando ${x * y} metros quadrados`)
+      
+      return resultado.innerHTML = `O ambiente possui largura de ${x} e profundidade de ${y}, totalizando ${x * y} metros quadrados`  
+    } 
+  </script>
+
+</body>
+
+</html>

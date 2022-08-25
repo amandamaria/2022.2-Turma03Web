@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Programação Estruturada</title>
+</head>
+
+<body>
+  <label for="a">Primeiro número</label>
+  <input type="number" name="a" id="a" placeholder="nº 1">
+  <label for="b">Segundo número</label>
+  <input type="number" name="a" id="b" placeholder="nº 2">
+
+  <button id="btn" onclick="sum()">Calcular</button>
+  
+  <p><strong>Soma:</strong> <span id="result"></span></p>
+
+  <script>
+    function sum() {
+      const a = Number(document.getElementById('a').value)
+      const b = Number(document.getElementById('b').value)
+      const resultr = document.getElementById('result')
+
+      alert(`A soma dos números informados é: ${a+b}`)
+    
+     return result.innerHTML = `${a} + ${b} = ${a + b}`  
+    }
+  
+  </script>
+
+</body>
+
+</html>
