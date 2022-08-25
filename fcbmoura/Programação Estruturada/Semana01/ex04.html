@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Semana 01 - Exercício 4</title>
+</head>
+<body>
+    <h1> Média das notas </h1>
+    Primeira nota: <input type="number" name="tnota1" id="nota1">
+    Segunda nota: <input type="number" name="tnota2" id="nota2"> 
+    <button type="button" onclick="media()">Calcular média das notas</button>
+    <p id = "notafinal">Nota final</p>
+<script>
+    function media() {
+    var tnota1 =  document.getElementById("nota1");
+    var tnota2 =  document.getElementById("nota2");
+    var n1 = Number(tnota1.value);
+    var n2 = Number(tnota2.value);
+    var media = (n1*2 + n2*3)/5;
+    notafinal.innerHTML = media;
+    }
+</script>
+</body>
+</html>

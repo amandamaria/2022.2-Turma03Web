@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Semana 01 - exercício 6</title>
+</head>
+<body>
+    <h1> Último dígito</h1>
+    Digite o número <input type="number" name="número" id="num">
+    <button type="button" onclick="modulo()"> Obter último dígito</button>
+    <p id="modulo">Resultado</p>
+
+<script>
+    function modulo(){
+        var inserido = document.getElementById("num");
+        var nins = Number(inserido.value);
+        var ultimo = nins % 10;
+        document.getElementById("modulo").innerHTML = "O último dígito do número inserido é: " + ultimo + " ."
+
+    }
+
+</script>
+</body>
+</html>

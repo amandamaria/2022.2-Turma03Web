@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Semana 01 - Exercício 3</title>
+</head>
+<body>
+    <h1> Saudação</h1>
+    Digite seu nome: <input type="text" id="nome" value ="">
+    <button onclick="saudacao()">Clique aqui</button>
+    <p id="frase"></p>
+    <script>
+        function saudacao(){
+            var nome = document.getElementById("nome").value;
+            document.getElementById("frase").innerHTML = "Olá," + nome + " , seja bem vindo(a) ao mundo da programação estrutural."
+        }
+
+    </script>
+    
+
+</body>
+</html>
