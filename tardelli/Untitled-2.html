@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="br-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de Programação Estruturada</title>
+</head>
+<body>
+    <h1>Exercício 02</h1>
+    <h2>Insira um valor para obter a Média</h2>
+   
+    x: <input type="number" id="meuX" value="">
+    y: <input type="number" id="meuY" value="">
+    <button onclick="media()">Clique Aqui</button>
+    <p id="minhaResposta"></p>
+ 
+<script>
+        function media() {
+        var x = Number(document.getElementById("meuX").value);
+        var y = Number(document.getElementById("meuY").value);
+   
+        var m = (x + y)/2;
+        alert(m);
+    }
+    </script>
+</body>
+ 
+</html>
+
