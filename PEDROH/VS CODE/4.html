@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+x: <input type="number" id="meuX" value="">
+y: <input type="number" id="meuY" value="">
+<button onclick="media()">Clique Aqui</button>
+<p id="minhaResposta"></p>
+<script>
+function media() {
+var nota1 = Number(document.getElementById("meuX").value);
+var nota2 = Number(document.getElementById("meuY").value);
+var r = (((nota1*2) + (nota2*3)) / 5)
+alert(r);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+x: <input type="number" id="meuX" value="">
+y: <input type="number" id="meuY" value="">
+<button onclick="soma()">Clique Aqui</button>
+<p id="minhaResposta"></p>
+<script>
+function soma() {
+var x = Number(document.getElementById("meuX").value);
+var y = Number(document.getElementById("meuY").value);
+var r = x + y;
+alert(r);
+}
+</script>
+</body>
+</html>
