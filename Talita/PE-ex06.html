@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Exercício 6</h1>
+
+    <p>Informe um número:</p>
+    N: <input type="number" id="numero" value="">
+    <button onclick="resultado()">OK!</button>
+    <p id="resultado"></p>
+
+    <script>
+        function resultado(){
+            var num = Number(document.getElementById("numero").value);
+            var resto = num % 10;
+            document.getElementById("resultado").innerHTML = "O último dígito é " + resto;
+        }
+    </script>
+</body>
+</html>

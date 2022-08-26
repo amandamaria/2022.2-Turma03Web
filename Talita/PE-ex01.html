@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Exercício 01</h1>
+    <h2>Insira dois valores para obter a soma:</h2>
+
+    A: <input type="number" id="var_A" value=""><button onclick="soma()">Ok</button>
+    <p id="number1"></p>
+    B: <input type="number" id="var_B" value=""><button onclick="soma()">Ok</button>
+    <p id="number2"></p>
+    <p id="resposta"></p>
+
+    <script>
+		function soma() {
+
+            var a = Number (document.getElementById("var_A").value);
+            document.getElementById("number1").innerHTML = a;
+            var b = Number (document.getElementById("var_B").value);
+			document.getElementById("number2").innerHTML = b;
+            var resultado = (a+b)
+            document.getElementById("resposta").innerHTML = a + " + " + b + " = " + resultado;
+            alert(resultado);
+        }
+    </script>
+</body>
+</html>
