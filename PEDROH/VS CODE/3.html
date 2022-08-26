@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<label for="name">Nome</label>
+<input type="text" name="name" id="name" placeholder="INSIRA SEU
+NOME">
+<button id="btn" onclick="welcomeMessage()">Clique aqui</button>
+<p><span id="resultado"></span></p>
+<script>
+function welcomeMessage() {
+const name = document.getElementById('name').value
+const resultado = document.getElementById('resultado')
+return resultado.innerHTML = `Olá ${name}, seja bem vindo(a) ao
+mundo da programação estruturada`;
+}
+</script>
+</body>
+</html>
