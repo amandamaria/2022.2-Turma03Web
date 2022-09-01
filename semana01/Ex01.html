@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Programacao Estruturada</title>
+    </head>
+    <body>
+        <h1>Exercicio - 01</h1>
+
+        1 Numero: <input type="number" id="n1" value="">
+        2 Numero: <input type="number" id="n2" value="">
+        <button onclick="somando()">Somar</button>
+
+        <script>
+            function somando() {
+                let x = Number(document.getElementById("n1").value);
+                let y = Number(document.getElementById("n2").value);
+
+                let resultado = x + y;
+                alert(x + " + " + y + " = " + resultado);
+            }
+        </script>
+    </body>
+</html>

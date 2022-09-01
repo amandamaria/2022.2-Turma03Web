@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Programacao Estruturada</title>
+    </head>
+    <body>
+        <h1>Exercicio - 05</h1>
+
+        Largura: <input type="number" id="largura" value="">
+        Profundidade: <input type="number" id="profundidade" value="">
+        <button onclick="area()">Calcular</button>
+
+        <script>
+            function area() {
+                let x = Number(document.getElementById("largura").value);
+                let y = Number(document.getElementById("profundidade").value);
+
+                let w = x * y;
+                alert("O ambiente possui largura de " + x +"m" + " e profundidade de " + y + "m" + ", totalizando " + w + "m²" + " metros quadrados.");
+            }
+        </script>
+    </body>
+</html>
