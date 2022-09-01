@@ -1,0 +1,25 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Expressão Aritmética II</h1>
+N1: <input type="number" id="a" value=""><br />
+N2: <input type="number" id="b" value=""><br />
+N3: <input type="number" id="c" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ var a = Number(document.getElementById('a').value);
+ var b = Number(document.getElementById('b').value);
+ var c = Number(document.getElementById('c').value);
+
+ // implemente a partir daqui
+ var r = - a - (b + c * a * b)/(c*a); // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = r;
+ }
+ </script>
+</body>
+</html>

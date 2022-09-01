@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Volume de um Prisma de Base Retangular</h1>
+A: <input type="number" id="a" value=""><br />
+B: <input type="number" id="b" value=""><br />
+C: <input type="number" id="c" value=""><br />
+
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ var a = Number(document.getElementById('a').value);
+ var b = Number(document.getElementById('b').value);
+ var c = Number(document.getElementById('c').value);
+
+ // implemente a partir daqui
+ var volume = ((a*b)/2)*c // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = volume;
+ }
+ </script>
+</body>
+</html>

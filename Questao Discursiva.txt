@@ -1,0 +1,4 @@
+-- Questão Discursiva --
+
+O CSS é uma linguagem de estilização de documentos HTML, seu objetivo permite atribuir as tags html propriedades visuais.
+Criada em 1995 por Hâkon Wium Lie e Bert Bos e apoiada pela W3C, a proposta seria que o HTML puro seria para a estruturação dos textos, enquanto o css seria para melhorar a aparência dos sites web. O css pode ser tanto incluido no cabeçalho da página dentro da tag <style></style>, ou pode ser declarada as propriedades dentro de um arquivo do formato '.css', que seria importado na página '.html'.
