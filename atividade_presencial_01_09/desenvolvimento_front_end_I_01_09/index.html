@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <article id="article">
+            <h1>formas de declarar funções em Javascript</h1>
+            <p>
+                No JavaScritp há basicamente três formas de declarar funções:
+                function expression, function declaration e arrow function. A
+                seguir mostrarei as principais características de cada forma.
+            </p>
+
+            <div class="article__section">
+                <h2>Function Expression</h2>
+                <p>
+                    A palavra-chave <strong>function</strong> pode ser utilizada
+                    para declarar uma função dentro de uma expressão. Desta
+                    forma, o nome da função pode ser omitido (função anônima). A
+                    imagem a seguir demonstra os elementos necessários para
+                    declarar um função utilizando esta forma.
+                </p>
+                <img
+                    src="./images/function-expression.png"
+                    alt="Exemplo de function expression"
+                />
+            </div>
+
+            <div class="article__section">
+                <h2>Function Declaration</h2>
+                <p>
+                    Diferentemente da function expression, a function
+                    declaration necessita de um indentificador. Além disso, a
+                    function declaration pode sofrer hoisting. Para saber mais
+                    sobre sobre hoisting acesse nosso artigo sobre o tema
+                    <a href="./pages/hoisting.html">clicando aqui</a>. A imagem
+                    a seguir demonstra os elementos necessários para declarar um
+                    função utilizando esta forma.
+                </p>
+                <img
+                    src="./images/function-declaration.png"
+                    alt="Exemplo de function declaration"
+                />
+            </div>
+
+            <div class="article__section">
+                <h2>Arrow Function</h2>
+                <p>
+                    Arrow function é a forma simplificada de declarar funcões.
+                    Utilizando essa forma de declararação, não é necessário
+                    utilizar a palavra chave <strong>function</strong> para
+                    indicar que se trata de uma função. Para isso, após os
+                    parâmetros, basta colocar os sinais => e logo em seguida o
+                    corpo da função. Além disso, caso o copo da função tenha
+                    somente uma linha, não é necessário colocar a palavra-chave
+                    <strong>return</strong>. Vale ressaltar, que a notação
+                    <strong>this</strong> se comporta de forma diferente em
+                    arrow functions. A imagem a seguir demonstra os elementos
+                    necessários para declarar um função utilizando esta forma.
+                </p>
+                <img
+                    src="./images/arrow-function.png"
+                    alt="Exemplo de arrow function"
+                />
+            </div>
+
+            <!-- o link que redireciona para outra página é a propria imagem do linkedin, basta clicar nela -->
+            <div class="article__author">
+                <p>Felipe de Azevedo Pessoa</p>
+                <p>Estudante de Informática para Internet</p>
+                <a
+                    href="https://br.linkedin.com/in/felipe-de-azevedo"
+                    target="_blank"
+                >
+                    <img
+                        src="./images/linkedin-logo.png"
+                        alt="Logomarca do linkedin"
+                /></a>
+            </div>
+        </article>
+        <script src="index.js"></script>
+    </body>
+</html>
