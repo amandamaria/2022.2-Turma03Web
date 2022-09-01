@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Média Ponderada</h1>
+A: <input type="number" id="a" value=""><br />
+B: <input type="number" id="b" value=""><br />
+C: <input type="number" id="c" value=""><br />
+
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ var n1 = Number(document.getElementById('a').value);
+ var n2 = Number(document.getElementById('b').value);
+ var n3 = Number(document.getElementById('c').value);
+
+ // implemente a partir daqui
+ var mediaPonderada = (n1 * 4 + n2 * 5 + n3 * 6)/15 // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = "A média ponderada (4,5 e 6) entre os números " + n1 + ", " + n2 + " e " + n3 + " é " + mediaPonderada;
+ }
+ </script>
+</body>
+</html>
