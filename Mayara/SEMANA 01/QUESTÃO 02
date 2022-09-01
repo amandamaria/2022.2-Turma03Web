@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programação Estruturada </title>
+	</head>
+	<body>
+		<h1>Entrada doPrograma </h1>
+		 N1: <input type="number" id="x" value=""><br/>
+		 N2: <input type="number" id="y" value=""><br/>
+		 N3: <input type="number" id="w" value=""><br/>
+		 <button onclick="executarExercicio()">OK</button>
+		 <p id="resultado"></p>
+		<script>
+			function executarExercicio(){
+				var x = Number (document.getElementById("a").value);
+				var y = Number(document.getElementById("b").value);
+				var w = Number(document.getElementById("c").value);
+
+				var r = [((((x+y)/z)+w)/z)+w]/[x+y*y-w]
+				document.getElementById("resultado").innerHTML = r;
+			}
+		</script>
+	</body>
+</html>
