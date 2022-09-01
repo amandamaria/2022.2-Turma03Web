@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+            <h1>Entrada do Programa</h1>
+            a: <input type="number" id="a" value=""><br />
+            b: <input type="number" id="b" value=""><br />
+            c: <input type="number" id="c" value=""><br />
+            <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                var b = Number(document.getElementById('b').value);
+                var c = Number(document.getElementById('c').value);
+                var m = (a+b+c)/3
+                var p1 = 'A média entre os números '
+                var vir = ', '
+                var p2 = ' e '
+                var p3 = ' é '
+                var r = p1 + a + vir + b + p2 + c + p3 + m
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
+    </body>
+</html>
