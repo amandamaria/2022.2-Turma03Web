@@ -1,0 +1,29 @@
+body {
+    background-color: darkorange;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+
+/* link ainda não visitado */
+a:link {
+    color: black;
+}
+
+/*  link visitado */
+a:visited {
+    color: black;
+}
+
+/* mouse sobre o link */
+a:hover {
+    color: red;
+}
+
+/* Link clicado */
+a:active {
+    color: yellow;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
