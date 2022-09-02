@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Programação Estruturada </title>
+	</head>
+	<body>
+		<section class="a">
+			<h1>A indissociabilidade entre o educar, o cuidar e o brincar.</h1>
+		 	<img src = "CUIDAR.jpg" alt = "Imagem mulher e criança">
+		 	<p>Nem a educação infantil, nem mesmo a concepção do que temos hoje como criança foi da mesma maneira. Era atribuído, na antiguidade, o papel de educar exclusivamente às mulheres ou algumas instituições religiosas. Com o desenvolvimento pós industrial das relações de trabalho, a mulher tem destinado suas atividades à vida profissional. A fim de cumprir essa demanda, nascem os espaços em que as crianças são cuidadas e acolhidas, tanto como, a preocupação à sua educação e ao seu bem estar. </p>
+
+		 	<p>Nesse contexto, nascem os debates referentes ao educar, cuidar e ao brincar. A escola assume, assim, o papel de humanizar o indivíduo e introduzi-lo na sociedade (com hábitos, valores, costumes e cultura), tendo sua concepção recebido influência das ideias de médicos higienistas e psicólogos. A qual traçava de forma muito restrita o que constituía um desenvolvimento normal e quais as condutas das crianças e de suas famílias que deveriam ser consideradas normais ou patológicas.</p>
+		</section>
+		<section class="b">
+			<h1> SAIBA MAI...</h1>
+			<a href="pagina02.html">Página 2 </a>
+			<a href="https://visiteodavinci.saber.com.br/blog/educacao-infantil-e-sua-importancia-no-desenvolvimento-da-crianca" target="_blank"> Página 3 </a>
+
+		</section>
+		<style> 
+			body {
+				background:#F0F8FF;
+			}
+			
+			a{
+				color: black !important;
+			}
+			a:visited{
+				color: blue;
+			}
+			a:hover{
+				color: red;
+			}
+			img{
+				height: 400px;
+			}
+
+		</style>
+	</body>
+</html>
