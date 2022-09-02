@@ -1,0 +1,208 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+    <style>
+        body {
+            background-color: rgb(51, 51, 51);
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+        }
+
+        h2 {
+            color: rgb(255, 255, 255);
+        }
+
+        h3 {
+            color: rgb(255, 255, 255);
+        }
+
+        p {
+            color: rgb(255, 255, 255);
+            max-width: 400px;
+            text-align: justify;
+        }
+
+        a {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        a:link {
+            color: rgb(98, 104, 201);
+        }
+
+        a:visited {
+            color: rgb(201, 98, 98);
+        }
+
+        a:active {
+            color: rgb(98, 104, 201);
+        }
+        a:hover {
+            color: rgb(62, 69, 209);
+        }
+
+        label {
+            color: rgb(255, 255, 255);
+            margin-right: 5px;
+        }
+
+        button {
+            width: 70%;
+            height: 35px;
+            font-weight: bold;
+            color: black;
+        }
+
+        input {
+            width: 50%;
+            margin-bottom: 4px;
+        }
+
+        .esquerda {
+            margin-right: 20px;
+        }
+        .direita {
+            margin-left: 20px;
+        }
+
+        #logo_css {
+            height: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Programação Estruturada -->
+    <section class="esquerda">
+        <h2>Programação Estruturada</h2>
+        <!-- Selecionar Exercício -->
+        <select name="exercicio" id="exercicio" onchange="ocultarCampo()">
+            <option value="1">Exercício 1</option>
+            <option value="2">Exercício 2</option>
+            <option value="3">Exercício 3</option>
+            <option value="4">Exercício 4</option>
+            <option value="5">Exercício 5</option>
+        </select>
+        <h3>Entrada do Programa</h3>
+        <!-- Entrada Valor A -->
+        <label for="a_input" id="a_label">Valor A</label>
+        <input type="number" id="a_input" value="" />
+        <br />
+        <!-- Entrada Valor B -->
+        <label for="b_input" id="b_label">Valor B</label>
+        <input type="number" id="b_input" value="" />
+        <br />
+        <!-- Entrada Valor C -->
+        <label for="c_input" id="c_label">Valor C</label>
+        <input type="number" id="c_input" value="" />
+        <br />
+        <!-- Entrada Valor D -->
+        <label for="d_input" id="d_label">Valor D</label>
+        <input type="number" id="d_input" value="" />
+        <!-- Botão Executar -->
+        <button onclick="executarExercicio()">Executar</button>
+        <p id="resultado">Resultado: </p>
+    </section>
+
+    <!-- Desenvolvimento Front-end I -->
+    <section class="direita">
+        <h2>Desenvolvimento Front-end I</h2>
+        <h3>Exercício 1</h3>
+        <p>O CSS foi desenvolvido em 1996 com o proposito de auxiliar na estilização do documento HTML, atualmente estamos na versão 3, capaz de introduzir um certo nível de interatividade e responsividade, posicionamento de elementos, escalonamento, flexibilidade, com uma dose de criatividade pode-se realizar estilizações incríveis, fazendo bastante diferença para o usuário, desde a experiência até um visual bastante agradável.</p>
+        <img id="logo_css" alt="Logo do CSS" src="https://seeklogo.com/images/C/css3-logo-8724075274-seeklogo.com.png" />
+        <br />
+        <a href="pagina_teste.html">Acessar Pagina Teste</a>
+        <br />
+        <a href="https://github.com/rauandesantana" target="_blank">Meu GitHub</a>
+    </section>
+
+    <script>
+        // Ocultar os Campos de Texto casos eles não sejam necessarios.
+        function ocultarCampo() {
+            var exercicio = document.getElementById('exercicio').options[document.getElementById('exercicio').selectedIndex].value;
+            if (exercicio == 1 || exercicio >= 3) {
+                // Valor D
+                document.getElementById("d_label").style.display = "none";
+                document.getElementById("d_input").style.display = "none";
+            } else {
+                // Valor D
+                document.getElementById("d_label").style.display = "initial";
+                document.getElementById("d_input").style.display = "initial";
+            }
+        }
+        ocultarCampo();
+
+        // Funcão de Execução do Exercício
+        function executarExercicio() {
+            // Exercício Escolhido
+            var exercicio = document.getElementById('exercicio').options[document.getElementById('exercicio').selectedIndex].value;
+            // Valores de Entradas
+            var a = Number(document.getElementById('a_input').value);
+            var b = Number(document.getElementById('b_input').value);
+            var c = Number(document.getElementById('c_input').value);
+            var d = Number(document.getElementById('d_input').value);
+            // Variavel Resultado Declarada
+            var resultado;
+            // Se Exercício 1
+            if (exercicio == 1) {
+                resultado = calcularExe1(a, b, c);
+            }
+            // Se Exercício 2
+            else if (exercicio == 2) {
+                resultado = calcularExe2(a, b, c, d);
+            }
+            // Se Exercício 3
+            else if (exercicio == 3) {
+                resultado = calcularExe3(a, b, c);
+            }
+            // Se Exercício 4
+            else if (exercicio == 4) {
+                resultado = calcularExe4(a, b, c);
+            }
+            // Se Exercício 5
+            else if (exercicio == 5) {
+                resultado = calcularExe5(a, b, c);
+            }
+            // Atribui o Resultado ao Elemento HTML com id Resultado
+            document.getElementById('resultado').innerHTML = "Resultado: " + resultado + "";
+        }
+
+        // Função de Cálculo do Exercício 1
+        function calcularExe1(a, b, c) {
+            return ((0 - a) - ((b + c * a * b) / (c * a)));
+        }
+
+        // Função de Cálculo do Exercício 2
+        function calcularExe2(a, b, c, d) {
+            var parte1 = (((a + b) / c) + d);
+            var parte2 = ((parte1 / c) + d);
+            var parte3 = (a + b * b - d);
+            return (parte2 / parte3);
+        }
+
+        // Função de Cálculo do Exercício 3
+        function calcularExe3(a, b, c) {
+            return (((a * b) / 2) * c);
+        }
+
+        // Função de Cálculo do Exercício 4
+        function calcularExe4(a, b, c) {
+            var r = ((a + b + c) / 3);
+            return "A média entre os números " + a + ", " + b + " e " + c + " é " + r + "";
+        }
+
+        // Função de Cálculo do Exercício 5
+        function calcularExe5(a, b, c) {
+            var r = (((a * 4) + (b * 5) + (c * 6)) / 15);
+            return "A média ponderada (4, 5 e 6) entre os números " + a + ", " + b + " e " + c + " é " + r + "";
+        }
+    </script>
+</body>
+
+</html>
