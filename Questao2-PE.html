@@ -1,0 +1,43 @@
+<html >
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada - Aula 05</title>
+    </head>
+ <body>
+    <h1>Exercício - 02</h1>
+         a: <input type="number" id="a" value=""><br><br>
+         b: <input type="number" id="b" value=""><br><br>
+         c: <input type="number" id="c" value=""><br><br>
+    <button onclick="bhaskara()">OK</button><br>
+    <p id="saida"></p>
+ <script>
+        let a;
+        let b;
+        let c;
+        function bhaskara() {
+            a = ler_entrada("a");
+            b = ler_entrada("b");
+            c = ler_entrada("c");
+            var d = delta(a,b,c);
+            var x1 = -b + raizQuadrada(d);
+            var x2 = -b - raizQuadrada(d);
+            escrever_saida("saida", "x1="+x1 + " x2="+x2);
+        }
+        function ler_entrada(campo) {
+            return Number(document.getElementById(campo).value);
+        }
+        function escrever_saida(campo, valor) {
+            document.getElementById(campo).innerHTML = valor;
+        }
+        function quadrado(x) {
+            return Math.pow(x,2);
+        }
+        function delta(a,b,c){
+            return quadrado(b)-(4*a*c);
+        }
+        function raizQuadrada(x){
+            return Math.sqrt(x);
+        }
+</script>
+ </body>
+</html>
