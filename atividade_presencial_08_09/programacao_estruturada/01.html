@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada - Aula 05</title>
+</head>
+
+<body>
+    <h1>Exercício - 01</h1>
+    <button onclick="f()">Rodar Programa</button>
+    <p id="d"></p>
+    <script>
+        "use strict";
+        function f() {
+            let a = "";
+            let b = 1;
+            let c = a + b + "<br />";
+            b++;
+            c = c + a + b + "<br />";
+            b++;
+            c = c + a + b + "<br />";
+            b++;
+            c = c + a + b + "<br />";
+            b++;
+            c = c + a + b + "<br />";
+            document.getElementById("d").innerHTML = c;
+        }
+    </script>
+</body
