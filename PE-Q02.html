@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Exercício - 02 Fórmula de bhaskara</h1>
+    a: <input type="number" id="a" value=""><br><br>
+    b: <input type="number" id="b" value=""><br><br>
+    c: <input type="number" id="c" value=""><br><br>
+    <button onclick="bhaskara()">OK</button><br>
+    <p id="saida"></p>
+    <p id="saida1"></p>
+    <script>
+        var x1;
+        var x2;
+        var a;
+        var b;
+        var c;
+        function bhaskara() {
+            a = ler_entrada("a");
+            b = ler_entrada("b");
+            c = ler_entrada("c");
+            x1 = (-b + (raizQuadrada(delta(a, b, c)))) / (2 * a);
+            x2 = (-b - (raizQuadrada(delta(a, b, c)))) / (2 * a);
+            saida.innerHTML = `X1 = ${x1};`  
+            saida1.innerHTML = `X2 = ${x2};`
+
+        }
+        function ler_entrada(campo) {
+            return Number(document.getElementById(campo).value);
+        }
+        function escrever_saida(campo, valor) {
+            document.getElementById(campo).innerHTML = valor;
+        }
+        function quadrado(x) {
+            return x * x;
+        }
+        function delta(a, b, c) {
+            return quadrado(b) - 4 * a * c;
+        }
+        function raizQuadrada(x) {
+            Math.sqrt(x);
+            var resultado;
+            if (x < 0) {
+                Math.abs(x);
+                return Math.sign(x) + Math.abs(x);
+            } else {
+                return Math.sqrt(x);
+            }
+        }
+    </script>
+</body>
+</html>
