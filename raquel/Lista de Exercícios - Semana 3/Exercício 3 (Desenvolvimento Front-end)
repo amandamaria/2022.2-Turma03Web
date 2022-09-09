@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05 - Atividade 3</title>
+</head>
+<style>
+    p.p1 {
+        background-color: aqua;
+        border-style: solid;
+        border-width: 3px;
+    }
+
+    p.p2 {
+        background-color: white;
+        border-style: dashed;
+        border-width: 3px;
+    }
+
+    p.p3 {
+        background-color: white;
+        border-width: 3px;
+        border-style: dashed double dotted solid
+    }
+
+    p.p4 {
+        background-color: white;
+        border-width: 3px;
+        border-style: solid;
+        border-color: red violet blue green   
+    }
+
+    p.outros {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: beige;
+    }
+</style>
+<body>
+    <h1>Centauros: insetos???</h1>
+    <p class="p1">Um inseto é caracterizado, primariamente, por ser um animal que possua: 3 pares de patas articuladas e 1 par de antenas. Os centauros, por sua vez, são criaturas mitológicas definidas como um ser com parte superior do corpo de um humano e a parte inferior e pernas de um cavalo.</p>
+    <p class="p2">Embora esses dois conceitos pareçam diferir demasiadamente, ao analisar-los cuidadosamente, é possível ver suas semelhanças. É meu objetivo provar que o centauro é, de fato, um inseto.</p>
+    <p class="p3">Primeiramente, a questão das patas. Os insetos - membros do filo dos artrópodes - tem, necessariamente, 3 pares de patas articuladas. Os centauros se encaixam facilmente nessa caracterísca, visto que eles possuem 2 pares de patas articuladas usadas para a locomoção (as patas do cavalo) e mais um par de patas usadas para as mais diversas funções (os braços humanos).</p>
+    <p class="p4">Ademais, o par de antenas. Antenas são definidas como órgãos sensoriais que podem exercer diversas funções sensitivas, como detecção de odores, sabores, auxiliar no equilíbrio ou captar sons. Um centauro, por ter a parte superior de seu corpo configurado como humano, possui orelhas, órgãos sensitivos capazes de captar ondas sonoras e de auxiliar com o equilíbrio corporal.</p>
+    <p class="outros">Visto isso, é apropriado apontar as semelhanças inegáveis entre um inseto e um centauro, sendo não só aceitável, mas também correto, afirmar que a criatura mitológica é poderia fazer parte da classe insecta. </p>
+    <p class="outros">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate itaque autem deserunt ut error iste explicabo sint tenetur ea, architecto optio repellat delectus dolorem velit suscipit impedit culpa? Cupiditate, totam.</p>
+</body>
+</html>
