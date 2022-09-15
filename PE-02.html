@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada - Q02</title>
+</head>
+<body>
+    <h1>Questão 02</h1>
+    N1: <input type="number" id="a" value=""><br>
+    N2: <input type="number" id="b" value=""><br>
+    N3: <input type="number" id="d" value=""><br>
+    N4: <input type="number" id="e" value=""><br>
+    <button onclick="executarExercicio()">OK!</button>
+    <p id='res'></p>
+
+    <script>
+        function executarExercicio(){
+            var x = Number(document.getElementById('a').value);
+            var y = Number(document.getElementById('b').value);
+            var z = Number(document.getElementById('d').value);
+            var w = Number(document.getElementById('e').value);        
+            var c = (((((z + y)/z) + w) / z) + w) / (x + (y * y) - w);
+            document.getElementById('res').innerHTML = `O resultado é ${c}.`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Exercício 02</h1>
+    <h2>Média Aritmética</h2>
+    <p>Informe dois valores para obter a Média Aritmética:</p>
+    Num_1: <input type="number" id="x" value="">
+    Num_2: <input type="number" id="y" value="">
+    <button onclick="media()">OK!</button>
+
+    <p id="media_a"></p>
+
+    <script>
+        function media(){
+            var x = Number(document.getElementById("x").value);
+            var y = Number(document.getElementById("y").value);
+            var med = (x+y)/2
+            document.getElementById("media_a").innerHTML = "Média Aritmética = " + med;
+        }
+    </script>
+</body>
+</html>

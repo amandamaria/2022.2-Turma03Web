@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada - Q04</title>
+</head>
+<body>
+    <h1>Questão 04</h1>
+    N1: <input type="number" id="a" value=""><br>
+    N2: <input type="number" id="b" value=""><br>
+    N3: <input type="number" id="c" value=""><br>
+    <button onclick="media()">OK!</button>
+    <p id='med'></p>
+
+    <script>
+        function media(){
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);       
+            var r = ((a+b+c)/3).toFixed(2);;
+            document.getElementById('med').innerHTML = `A média entre os número  ${a}, ${b} e ${c} é <b>${r}</b>.`;
+        }
+    </script>
+</body>
+</html>

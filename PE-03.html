@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada - Q03</title>
+</head>
+<body>
+    <h1>Questão 03</h1>
+    A: <input type="number" id="a" value=""><br>
+    B: <input type="number" id="b" value=""><br>
+    C: <input type="number" id="c" value=""><br>
+    <button onclick="executarExercicio()">OK!</button>
+    <p id='vol'></p>
+
+    <script>
+        function executarExercicio(){
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);       
+            var v = (((a*b)/2)*c).toFixed(2);;
+            document.getElementById('vol').innerHTML = `O volume do prisma de base triangular é <b>${c}m³</b>.`;
+        }
+    </script>
+</body>
+</html>

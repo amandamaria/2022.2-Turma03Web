@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q01</title>
+</head>
+<body>
+    <h1>Entrada do Programa</h1>
+    <p>N1: <input type="number" id="a" value=""></p>
+    <p>N2: <input type="number" id="b" value=""></p>
+    <button onclick="executar()">OK!</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function executar(){
+            var n1 = Number(document.getElementById('a').value);
+            var n2 = Number(document.getElementById('b').value);
+
+            var med = (n1+n2)/2;
+            var r = med.toFixed(2);
+            document.getElementById('resultado').innerHTML = `A média entre os numéros ${n1} e ${n2} é ${r}.`;
+        }
+    </script>
+</body>
+</html>

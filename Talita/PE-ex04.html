@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Exercício 4</h1>
+
+    <h2>Média Ponderada!</h2>
+
+    <p>Informe as duas notas:</p>
+
+    Nota1: <input type="number" id="nota_1" value="">
+    Nota2: <input type="number" id="nota_2" value="">
+    <button onclick="med_pond()">OK!</button>
+    
+    <p id="media_p"></p>
+
+    <script>
+        function med_pond(){
+            var nota1 = Number(document.getElementById("nota_1").value);
+            var nota2 = Number(document.getElementById("nota_2").value);
+            var media = ((nota1 * 2) + (nota2 * 3)) / 5;
+            document.getElementById("media_p").innerHTML = "Média Ponderada = " + media;
+        }
+    </script>
+</body>
+</html>

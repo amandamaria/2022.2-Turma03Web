@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Exercício 5</h1>
+    <h2>Calculando a área de um ambiente</h2>
+
+    L: <input type="number" id="larg" value="">
+    P: <input type="number" id="profu" value="">
+    <button onclick="area()">OK!</button>
+
+    <p id="area"></p>
+
+    <script>
+        function area(){
+            var x = Number(document.getElementById("larg").value);
+            var y = Number(document.getElementById("profu").value);
+            var w = x * y;
+            document.getElementById("area").innerHTML = "O ambiente possui largura de " + x + " e profundidade de " + y + ", totalizando " + w + " metros quadrados.";
+        }
+    </script>   
+</body>
+</html>
