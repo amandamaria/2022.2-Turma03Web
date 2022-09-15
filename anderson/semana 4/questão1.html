@@ -1,0 +1,26 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+N2: <input type="number" id="b" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ let num1 = Number(document.getElementById('a').value);
+ let num2 = Number(document.getElementById('b').value);
+ let media = (num1 + num2)/2;
+ let total = media.toFixed(2);
+ 
+ document.getElementById('resultado').innerHTML = `A media entre os números a: ${num1} e b: ${num2} é r: ${total}`;
+ 
+ }
+ 
+ </script>
+</body>
+</html>
+ 
