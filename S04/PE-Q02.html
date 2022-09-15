@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q02</title>
+</head>
+<body>
+    <h1>Entrada do Programa</h1>
+    <p>N1: <input type="number" id="a" value=""></p>
+    <p>N2: <input type="number" id="b" value=""></p>
+    <p>N3: <input type="number" id="c" value=""></p>
+    <button onclick="executar()">OK!</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function executar(){
+            var n1 = Number(document.getElementById('a').value);
+            var n2 = Number(document.getElementById('b').value);
+            var n3 = Number(document.getElementById('c').value);
+
+            var med_p = (n1*4 + n2*5 + n3*6)/(4+5+6);
+
+            var r = med_p.toFixed(2);
+            
+            document.getElementById('resultado').innerHTML = `A média ponderada (4, 5 e 6) entre os números ${n1}, ${n2} e ${n3} é ${r}.`;
+        }
+    </script>
+</body>
+</html>
