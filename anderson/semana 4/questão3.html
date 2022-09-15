@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+N2: <input type="number" id="b" value=""><br />
+N3: <input type="number" id="c" value=""><br />
+N4: <input type="number" id="d" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ let num1 = Number(document.getElementById('a').value);
+ let num2 = Number(document.getElementById('b').value);
+ let num3 = Number(document.getElementById('c').value);
+ let num4 = Number(document.getElementById('d').value);
+ 
+ let maior = num1;
+ let menor = num1;
+ 
+ if (num2 > maior) {
+    maior = num2
+  }else if (num2 < menor) {
+    menor = num2
+  }
+ 
+  if (num3 > maior) {
+    maior = num3;
+  }else if (num3 < menor) {
+    menor = num3
+  }
+ 
+  if (num4 > maior) {
+    maior = num4  
+  }else if (num4 < menor){
+    menor = num4
+  }
+ 
+ document.getElementById('resultado').innerHTML = `O maior valor é ${maior} e o menor valor é ${menor}`;
+ 
+ }
+ 
+ </script>
+</body>
+</html>
