@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Programação Estrturada</title>
+</head>
+<body>
+    N1: <input type="number" id="a" value=""><br />
+    N2: <input type="number" id="b" value=""><br />
+    N3: <input type="number" id="c" value=""><br />
+    <button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+</body>
+    <script>
+        function executarExercicio() {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);
+
+            var r = (a*4+b*5+c*6)/15; 
+            r = Math.ceil(r)
+
+            document.getElementById('resultado').innerHTML = "A média ponderada (4,5 e 6) entre os números " + a + ", " + b + " e " + c + " é " + r;
+        }
+    </script>
+</html>
