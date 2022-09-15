@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Exercício I - HTML/ CSS</title>
+	<style>
+		th{
+			background-color: #4169E1;
+			color: white;
+			font-weight: normal;
+		}
+		td{
+			padding: 5px 5px 5px 5px;
+			font
+		}
+		table{
+			font-family: "Arial, Helvetica, sans-serif;";
+			width: 100%;
+		}
+		table,th,td{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		tr:nth-child(even){
+			background-color: rgb(220, 220, 220);
+		}
+		.alinhado{
+			text-align: center;
+		}
+
+
+	</style>
+</head>
+<body>
+	<table>
+		<tr>
+			<th rowspan="2"> SKU </th>
+			<th rowspan="2"> Nome </th>
+			<th rowspan="2"> Peso </th>
+			<th colspan="6"> Dimensões Caixa </th>
+			<tr>
+				<th> Altura </th>
+				<th> Largura </th>
+				<th> Profundidade </th>
+			</tr>
+		</tr>
+
+		<tr>
+			<td> VENT-TB-11 </td>
+			<td> Ventilador Turbo J11 </td>
+			<td class="alinhado"> 2kg </td>
+			<td class="alinhado"> 40cm </td>
+			<td class="alinhado"> 30cm </td>
+			<td class="alinhado"> 20cm </td>
+		</tr>
+
+		<tr>
+			<td> APPL-IPAD-7-9876 </td>
+			<td> Ipad Geração 7 </td>
+			<td class="alinhado"> 700g </td>
+			<td class="alinhado"> 25cm </td>
+			<td class="alinhado"> 15cm </td>
+			<td class="alinhado"> 5cm </td>
+		</tr>
+
+		<tr>
+			<td> SG-MOTO-G-974 </td>
+			<td> Smartphone Motorola G </td>
+			<td class="alinhado"> 400g </td>
+			<td class="alinhado"> 18cm </td>
+			<td class="alinhado"> 8cm </td>
+			<td class="alinhado"> 3cm </td>
+		</tr>
+
+		<tr>
+			<td> AMZ-EBK-10-9383 </td>
+			<td> Leitor Kindle 10 Geração </td>
+			<td class="alinhado"> 300g </td>
+			<td class="alinhado"> 17cm </td>
+			<td class="alinhado"> 8,5cm </td>
+			<td class="alinhado"> 3,5cm </td>
+		</tr>
+
+		<tr>
+			<td> JB-PHO-9383 </td>
+			<td> Headset Gamer JBL Quantum 100 </td>
+			<td class="alinhado"> 480g </td>
+			<td class="alinhado"> 25cm </td>
+			<td class="alinhado"> 17cm </td>
+			<td class="alinhado"> 15cm </td>
+		</tr>
+
+		<tr>
+			<td> HP-DJ-9867-2020 </td>
+			<td> Impressora HP Deskjet 2982 </td>
+			<td class="alinhado"> 3kg </td>
+			<td class="alinhado"> 50cm </td>
+			<td class="alinhado"> 40cm </td>
+			<td class="alinhado"> 45cm </td>
+		</tr>
+
+	</table>
+</body>
+</html>
