@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabelas - ex01</title>
+    <style>
+        table{
+            width: 100%;
+        }
+        table,
+        tr,
+        th,
+        td {
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        th {
+            color: white;
+            font-weight: normal;
+            background-color: rgb(85, 161, 224);
+        }
+
+        table#table1 tr:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        td {
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table1">
+        <tr>
+            <th rowspan="2">SKU</th>
+            <th rowspan="2">Nome</th>
+            <th rowspan="2" class="center">Peso</th>
+            <th colspan="3">Dimensões Caixa</th>
+        </tr>
+        <tr>
+            <th>Altura</th>
+            <th>Largura</th>
+            <th>Profundidade</th>
+        </tr>
+        <td>VENT-TB-11</td>
+        <td>Ventilador Turbo J11</td>
+        <td class="center">2kg</td>
+        <td class="center">40cm</td>
+        <td class="center">30cm</td>
+        <td class="center">20cm</td>
+        </tr>
+        <tr>
+            <td>APPL-IPAD-7-9876</td>
+            <td>Ipad Geração7</td>
+            <td class="center">700g</td>
+            <td class="center">25cm</td>
+            <td class="center">15cm</td>
+            <td class="center">5cm</td>
+        </tr>
+        <tr>
+            <td>SG-MOTO-G-974</td>
+            <td>Smartphone Motorola G</td>
+            <td class="center">400g</td>
+            <td class="center">18cm</td>
+            <td class="center">8cm</td>
+            <td class="center">3cm</td>
+        </tr>
+        <tr>
+            <td>AMZ-EBK-10-9383</td>
+            <td>Leitor Kindle 10 Geração</td>
+            <td class="center">300g</td>
+            <td class="center">17cm</td>
+            <td class="center">8,5cm</td>
+            <td class="center">3,5cm</td>
+        </tr>
+        <tr>
+            <td>JB-PHO-9383</td>
+            <td>Headset Gamer JBL Quantum 100</td>
+            <td class="center">480g</td>
+            <td class="center">25 cm</td>
+            <td class="center">17 cm</td>
+            <td class="center">15 cm</td>
+        </tr>
+        <tr>
+            <td>HP-DJ-9867-2020</td>
+            <td>Impressora HP Deskjet 2982</td>
+            <td class="center">3 kg</td>
+            <td class="center">50 cm</td>
+            <td class="center">40 cm</td>
+            <td class="center">45 cm</td>
+        </tr>
+    </table>
+</body>
+
+</html>
