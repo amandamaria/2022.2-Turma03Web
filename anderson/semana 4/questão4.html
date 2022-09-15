@@ -1,0 +1,103 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Tabelas</title>
+ 
+<style>
+ 
+  #tab tr:nth-child(even) {
+    background-color: lightgray;
+   }
+  table {
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+ 
+  }
+  td {
+    text-align: center;
+  }
+  th {
+    font-weight: normal;
+    background: #ADD8E6;
+    color: azure;
+  }
+  .esq {
+    text-align: left ;
+  }
+ 
+</style>
+</head>
+<body>
+ 
+<table id="tab" border="black">
+  <tr class="cabeca">
+    <th rowspan="2">SKU</th>
+    <th rowspan="2">Nome</th>
+    <th rowspan="2">Peso</th>
+    <th colspan="3">Dimensões Caixa</th>
+   
+     
+     
+ 
+  </tr>
+ 
+  <tr>
+    <th>Altura</th>
+    <th>Largura</th>
+    <th>Profundidade</tr>
+    <td class="esq">VENT-TB-11</td>
+    <td class="esq">Ventilador Turbo J11</td>
+    <td>2kg</td>
+    <td>40cm</td>
+    <td>30cm</td>
+    <td>20cm</td>
+   
+  </tr>
+  <tr>
+    <td class="esq">APP-IPAD-7-9876</td>
+    <td class="esq">ipad geração 7</td>
+    <td>700g</td>
+    <td>25cm</td>
+    <td>15cm</td>
+    <td>5cm</td>
+  </tr>
+  <tr>
+    <td class="esq">SG-MOTO-G-974</td>
+    <td class="esq">Smartphone Motorola G</td>
+    <td>400g</td>
+    <td>18cm</td>
+    <td>8cm</td>
+    <td>3cm</td>
+  </tr>
+  <tr>
+    <td class="esq">AMZ-EBK-10-9383</td>
+    <td class="esq">Leitor Kindle 10 geração</td>
+    <td>300g</td>
+    <td>17cm</td>
+    <td>8,5cm</td>
+    <td>3,5cm</td>
+  </tr>
+  <tr>
+    <td class="esq">JB-PHO-9383</td>
+    <td class="esq">Headset Gamer JBL Quantum 100</td>
+    <td>480g</td>
+    <td>25cm</td>
+    <td>17cm</td>
+    <td>15cm</td>
+  </tr>
+  <tr>
+    <td class="esq">HP-DJ-9867-2020</td>
+    <td class="esq">Impressora HP Deskjet 2982</td>
+    <td>3kg</td>
+    <td>50cm</td>
+    <td>40cm</td>
+    <td>45cm</td>
+  </tr>
+ 
+</table>
+</body>
+</html>
