@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Questão 2</title>
+    </head>
+<body>
+    <h1>Entrada do Programa</h1>
+    <h2> Questão 2 </h2>
+    N1: <input type="number" id="a" value=""><br />
+    N2: <input type="number" id="b" value=""><br />
+    N3: <input type="number" id="c" value=""><br />
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+        <script>
+             function executarExercicio() {
+             var a = Number(document.getElementById('a').value);
+             var b = Number(document.getElementById('b').value);
+             var c = Number(document.getElementById('c').value);
+
+             // implemente a partir daqui
+             var r = 0; // atribua o resultado dos seus algoritmos a
+             var x = 0;
+             r = calculaMediaPonderada(a, b, c);
+             x = Math.ceil(r);
+             document.getElementById('resultado').innerHTML = "A média ponderada (4,5,6) entre os números " + a + ", " + b + " e " + c + " é " + x;
+             }
+
+             function calculaMediaPonderada(n1, n2, n3){
+                return ((n1*4) + (n2*5) + (n3*6))/(4+5+6);
+             }
+        </script>
+    </body>
+</html>

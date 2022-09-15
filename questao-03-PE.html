@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Questão 3</title>
+    </head>
+<body>
+    <h1>Entrada do Programa</h1>
+    <h2> Questão 3 </h2>
+    N1: <input type="number" id="a" value=""><br />
+    N2: <input type="number" id="b" value=""><br />
+    N3: <input type="number" id="c" value=""><br />
+    N4: <input type="number" id="d" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+        <script>
+         function executarExercicio() {
+         var a = Number(document.getElementById('a').value);
+         var b = Number(document.getElementById('b').value);
+         var c = Number(document.getElementById('c').value);
+         var d = Number(document.getElementById('d').value);
+         // implemente a partir daqui
+         var maior = 0;
+         var menor = 0;
+         maior = maiorEntreNumeros(a,b,c,d);
+         menor = menorEntreNumeros(a,b,c,d);
+         document.getElementById('resultado').innerHTML = "Dentre os números: " + a + ", " + b + ", " + c + " e " +  d + " temos como o maior número " + maior + " e como o menor número " + menor;
+         }
+
+         function menorEntreNumeros(a, b, c, d){
+
+          if(a < b && a < c && a < d){
+            return a;
+          }
+
+          else if(b < a && b < c && b < d){
+            return b;
+          }
+
+          else if(c < a && c < b && c < d){
+            return c;
+          }
+
+          else{
+            return d;
+          }
+
+         }
+
+         function maiorEntreNumeros(a, b, c, d){
+
+          if(a > b && a > c && a > d){
+            return a;
+          }
+
+          else if(b > a && b > c && b > d){
+            return b;
+          }
+
+          else if(c > a && c > b && c > d){
+            return c;
+          }
+
+          else{
+            return d;
+          }
+
+         }
+
+        </script>
+    </body>
+</html>
