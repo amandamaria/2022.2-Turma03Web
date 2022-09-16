@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S04-A06-Q2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container">
+            <a href="index.html">
+                <img src="https://www.metropoledigital.ufrn.br/portal/assets/images/IMD_logo_01-01.svg"
+                alt="logotipo Metrópole Digital" />
+            </a>
+
+        <h1>PE-S04-A06-Q2</h1>
+        <h2>Média Ponderada com arredondamento</h2>
+
+
+        <form id="entradas">
+            <fieldset>
+                <legend>Entradas do Programa</legend>
+
+                <p>Construa um programa que contém (e utiliza) uma função que recebe 3 números e retorna a média
+                    ponderada 4, 5 e 6, respectivamente, e com arredondamento para cima. Ao final, apresente o resultado
+                    no seguinte formato “A média ponderada (4, 5 e 6) entre os números a, b e c é r”.</p>
+
+                N1: <input class="entrada" type="number" id="a" value=""><br />
+                N2: <input class="entrada" type="number" id="b" value=""><br />
+                N3: <input class="entrada" type="number" id="c" value=""><br />
+
+                <input class="botao" type="button" value="OK" onclick="executarExercicio()">
+                <input class="botao" type="reset" value="Limpar" onclick="limpar()">
+            </fieldset>
+        </form>
+
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+
+        <hr>
+        <input class="botao" type="button" value="Voltar" onclick="location.href='index.html';">
+    </div>
+
+    <script>
+        function executarExercicio() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let c = Number(document.getElementById("c").value);
+            let mediaPonderada = ((a * 4) + (b * 5) + (c * 6)) / (4 + 5 + 6);
+
+            document.getElementById("resultado").innerHTML = `
+            A média ponderada (4, 5 e 6) entre os números
+            <strong>${a}</strong>, 
+            <strong>${b}</strong> e 
+            <strong>${c}</strong> é: 
+            <strong>${Math.ceil(mediaPonderada)}</strong>.`;
+        }
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>

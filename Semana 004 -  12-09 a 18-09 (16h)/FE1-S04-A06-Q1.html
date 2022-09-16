@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE1-S04-A06-Q1</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .alinhamentoEsquerdo{
+            text-align: left;
+        }
+        table,
+        th,
+        td {
+            padding: 5px;
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table {
+            border-style: solid;
+            border: 1px solid black;
+            border-collapse: collapse;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 100%;
+            
+        }
+
+        th {
+            color: white;
+            font-weight: lighter;
+            background-color: rgb(75, 119, 212);
+        }
+
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="containerFE1">
+        <a href="index.html">
+            <img src="https://www.metropoledigital.ufrn.br/portal/assets/images/IMD_logo_01-01.svg"
+                alt="logotipo Metrópole Digital" />
+        </a>
+
+
+        <h1>FE1-S04-A06-Q1</h1>
+
+        <h2>Tabelas</h2>
+        <hr>
+
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2">SKU</th>
+                    <th rowspan="2">Nome</th>
+                    <th rowspan="2">Peso</th>
+                    <th colspan="3">Dimensôes da Caixa</th>
+                </tr>
+                <tr>
+                    <th>Altura</th>
+                    <th>Largura</th>
+                    <th>Profundidade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="alinhamentoEsquerdo">VENT-TB-11</td>
+                    <td class="alinhamentoEsquerdo">Ventilador Turbo J11</td>
+                    <td>2Kg</td>
+                    <td>40cm</td>
+                    <td>30cm</td>
+                    <td>20cm</td>
+                </tr>
+                <tr>
+                    <td class="alinhamentoEsquerdo">APPL-IPAD-7-9876</td>
+                    <td class="alinhamentoEsquerdo">Ipad Geração 7</td>
+                    <td>700g</td>
+                    <td>25cm</td>
+                    <td>15cm</td>
+                    <td>5cm</td>
+                </tr>
+                <tr>
+                    <td class="alinhamentoEsquerdo">SG-MOTO-G-974</td>
+                    <td class="alinhamentoEsquerdo">Smartphone Motorola G</td>
+                    <td>400g</td>
+                    <td>18cm</td>
+                    <td>8cm</td>
+                    <td>3cm</td>
+                </tr>
+                <tr>
+                    <td class="alinhamentoEsquerdo">AMZ-EBK-10-9383</td>
+                    <td class="alinhamentoEsquerdo">Leitor Kindle 10 Geração</td>
+                    <td>300g</td>
+                    <td>17cm</td>
+                    <td>8,5cm</td>
+                    <td>3,5cm</td>
+                </tr>
+                <tr>
+                    <td class="alinhamentoEsquerdo">JB-PHO-9383</td>
+                    <td class="alinhamentoEsquerdo">Headset Gamer JBL Quantum 100</td>
+                    <td>480g</td>
+                    <td>25cm</td>
+                    <td>17cm</td>
+                    <td>15cm</td>
+                </tr>
+                <tr>
+                    <td class="alinhamentoEsquerdo">HP-DJ-9867-2020</td>
+                    <td class="alinhamentoEsquerdo">Impresora HP Deskjet 2982</td>
+                    <td>3kg</td>
+                    <td>50cm</td>
+                    <td>40cm</td>
+                    <td>45cm</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+
+        <hr>
+        <input class="botao" type="button" value="Voltar" onclick="location.href='index.html';">
+
+    </div>
+
+
+
+</body>
+
+</html>

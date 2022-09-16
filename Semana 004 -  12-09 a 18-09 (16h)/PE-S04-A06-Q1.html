@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S04-A06-Q1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <a href="index.html">
+            <img src="https://www.metropoledigital.ufrn.br/portal/assets/images/IMD_logo_01-01.svg"
+            alt="logotipo Metrópole Digital" />
+        </a>
+        
+
+        <h1>PE-S04-A06-Q1</h1>
+        <h2>Média Aritmética com 2 casas decimais</h2>
+
+
+        <form id="entradas">
+            <fieldset>
+                <legend>Entradas do Programa</legend>
+
+                <p>Construa um programa que receberá 2 números e que, em seguida, calcula a média entre eles. Ao final,
+                    escreva o resultado obtido no seguinte formato “A média entre os números a e b é r”. O número
+                    apresentado deve possuir 2 casas decimais de precisão.</p>
+
+                N1: <input class="entrada" type="number" id="a" value=""><br />
+                N2: <input class="entrada" type="number" id="b" value=""><br />
+
+                <input class="botao" type="button" value="OK" onclick="executarExercicio()">
+                <input class="botao" type="reset" value="Limpar" onclick="limpar()">
+            </fieldset>
+        </form>
+
+        <p>Resultado:</p>
+        <p id="resultado"></p>
+
+        <hr>
+        <input class="botao" type="button" value="Voltar" onclick="location.href='index.html';">
+
+    </div>
+
+
+    <script>
+        function executarExercicio() {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let media = (a + b) / 2;
+
+            document.getElementById("resultado").innerHTML = `A média entre os números 
+            <strong>${a}</strong> e 
+            <strong>${b}</strong> é: 
+            <strong>${media.toFixed(2)}</strong>.`;
+        }
+
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+        }
+    </script>
+</body>
+
+</html>
