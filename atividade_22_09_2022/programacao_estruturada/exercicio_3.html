@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    Dia: <input id="a" value=""><br />
+    Mês: <input id="b" value=""><br />
+    Ano: <input id="c" value=""><br />
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);
+            // Escreva seus algoritmos a partir daqui.
+
+            var dataAtual = new Date();
+            var dataNiver = new Date(c, (b - 1), a);
+            var idade = (dataAtual - dataNiver) / ((((365.25 * 24) * 60) * 60) * 1000);
+
+            var r = Math.floor(idade); // atribua os resultados dos algoritmos a r
+            document.getElementById('resultado').innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>
