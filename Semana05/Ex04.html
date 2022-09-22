@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        Dia: <input type="number" id="dia">
+        Mês: <input type="number" id="mes">
+        Ano: <input type="number" id="ano">
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                let dia = document.getElementById('dia').value
+                let mes = document.getElementById('mes').value
+                let ano = document.getElementById('ano').value
+                let data = new Date(ano, mes-1, dia).toString()
+                data = data.slice(0, 3)
+                document.getElementById('resultado').innerHTML = data;
+            }
+        </script>
+    </body>
+</html>

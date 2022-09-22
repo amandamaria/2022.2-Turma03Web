@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        
+        Digite seu nome:<input type="text" id="nome" value="">
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                const texto = "Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital.";
+
+                var usuario = document.getElementById("nome").value;
+                document.getElementById("resultado").innerHTML = texto.replace("{USUARIO}", usuario);
+            }
+        </script>
+    </body>
+</html>

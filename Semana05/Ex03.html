@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        
+        Data de Nascimento: <input type="date" id="data">
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var dataDeHoje = new Date();
+                var nascimento = new Date(document.getElementById("data").value);
+                var idade_ms = dataDeHoje.getTime() - nascimento.getTime();
+                var idade = new Date(idade_ms); 
+                var idade_ano = Math.abs(idade.getUTCFullYear() - 1970);
+                var resposta = idade_ano + " anos";
+
+                document.getElementById("resultado").innerHTML = resposta;
+            }
+        </script>
+    </body>
+</html>

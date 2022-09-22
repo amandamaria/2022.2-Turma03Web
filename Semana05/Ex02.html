@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+         <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <p id="resultado2"></p>
+        <script>
+            function executarExercicio() {
+                var data = new Date().toString();
+                var dia = data.slice(8,10);
+                var mes = data.slice(4,7);
+                var ano = data.slice(11,15);
+                var hora = data.slice(16,18) +"h"+ data.slice(19,21)
+                document.getElementById('resultado').innerHTML = ` Data: ${dia} de ${mes} de ${ano} <br> Hora: ${hora} `
+            }
+        </script>
+    </body>
+</html>
