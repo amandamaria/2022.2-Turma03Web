@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    Nome: <input id="a" value=""><br />
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var a = document.getElementById('a').value;
+            // Escreva seus algoritmos a partir daqui.
+            var r = ""; // atribua os resultados dos algoritmos a r
+
+            const texto = "Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital.";
+            
+            r = texto.replace("{USUARIO}", a)
+
+            document.getElementById('resultado').innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>

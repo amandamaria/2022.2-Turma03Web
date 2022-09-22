@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            // Escreva seus algoritmos a partir daqui.
+            var r = ""; // atribua os resultados dos algoritmos a r
+
+            var data = new Date().toString();
+
+            var dia = data.substring(8, 10);
+            var mes = data.substring(4, 7);
+            var ano = data.substring(11, 15);
+
+            var hora = data.substring(16, 18);
+            var min = data.substring(19, 21);
+
+            r = "Data: " + dia + " de " + mes + " de " + ano + "<br />" +
+                "Hora: " + hora + "h" + min;
+
+            document.getElementById('resultado').innerHTML = r;
+
+        }
+    </script>
+</body>
+
+</html>

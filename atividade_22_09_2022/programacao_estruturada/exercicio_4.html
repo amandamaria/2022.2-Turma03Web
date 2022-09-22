@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Entrada do Programa</h1>
+    Dia: <input id="a" value=""><br />
+    Mês: <input id="b" value=""><br />
+    Ano: <input id="c" value=""><br />
+    <button onclick='executarExercicio()'>OK</button>
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            var a = Number(document.getElementById('a').value);
+            var b = Number(document.getElementById('b').value);
+            var c = Number(document.getElementById('c').value);
+            // Escreva seus algoritmos a partir daqui.
+            var r = ""; // atribua os resultados dos algoritmos a r
+            
+            var diaSemana = new Date(c, (b - 1), a).getDay();
+
+            switch(diaSemana){
+                case 0 : r = "Dom"; break;
+                case 1 : r = "Seg"; break;
+                case 2 : r = "Ter"; break;
+                case 3 : r = "Qua"; break;
+                case 4 : r = "Qui"; break;
+                case 5 : r = "Sex"; break;
+                case 6 : r = "Sab"; break;
+            }
+            
+            document.getElementById('resultado').innerHTML = r;
+        }
+    </script>
+</body>
+
+</html>
