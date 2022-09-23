@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<h1>Dia da Semana</h1>
+
+<input id="data" type="date">
+<button onclick="dia()">OK</button>
+<p id="saida"></p>
+
+<script>
+    function dia() {
+        var d = new Date (document.getElementById('data').value);
+        var s = d.toString().slice(0,3);
+        document.getElementById('saida').innerHTML = s;
+    }
+
+</script>
+<body>
+    
+</body>
+</html>

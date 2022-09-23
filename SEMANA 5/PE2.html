@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação estruturada</title>
+</head>
+
+<body>
+    <h1>Data e Hora</h1>
+
+    <button onclick="dataHora()">OK</button>
+    <p id="saida"></p>
+
+    <script>
+        function dataHora() {
+            var data = new Date();
+            var f = data.toString();
+            var d = f.slice(8,10) + ' de ' + f.slice(4,7) + ' de ' + f.slice(11,15);
+            var h = f.slice(16,18) + 'h' + f.slice(19,21);
+            document.getElementById('saida').innerHTML = 
+            'Data: ' + d + "<br><br>" + 'Hora: ' + h;
+        }
+
+    </script>
+
+</body>
+
+</html>

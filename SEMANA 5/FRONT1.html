@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 7</title>
+    <style>
+        input, select{
+            width: 80%;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+        
+        form {
+            margin: auto;
+            width: 80%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input[type=submit] {
+            width: 20%;
+            background-color: darkgray;
+        }
+        input[type=reset]{
+            width: 20%;
+            background-color: darkgray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cadastro de produtos</h1>
+    <p>_______________________</p>
+    <form action=" https://autoriaform.herokuapp.com/">
+        <label for="sku">SKU:</label>
+        <br>
+        <input type="text" id="sku" name="sku">
+        <br>
+        <label for="produto">Produto:</label><br>
+        <input type="text" id="produto" name="produto">
+        <br>
+        <label for="peso">Peso:</label><br>
+        <input type="number" name="peso" id="peso">
+        <br>
+        <label for="unidade">Unidade:</label><br>
+        <select name="unid" id="unidade">
+            <option value="kg">quilograma</option>
+            <option value="g">grama</option>
+            <option value="t">tonelada</option>
+        </select>
+        <br>
+        <label for="largura">Largura (cm):</label><br>
+        <input type="number" id="largura" name="largura">
+        <br>
+        <label for="altura">Altura(cm):</label><br>
+        <input type="number" name="altura" id="altura">
+        <br>
+        <label for="profundidade">Profundidade(cm):</label><br>
+        <input type="number" id="profundidade" name="profundidade">
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </form>
+    
+</body>
+</html>

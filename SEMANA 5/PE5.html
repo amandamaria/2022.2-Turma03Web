@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Constante</h1>
+    <input id="nome" type="text">
+    <button onclick="constante()">OK</button>
+    <p id="saida"></p>
+
+    <script>
+        function constante(){
+            const texto = 
+            "Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital."
+            var nome = document.getElementById('nome').value;
+            var result = texto.replace('{USUARIO}', nome);
+            document.getElementById('saida').innerHTML = result;
+        }
+
+
+    </script>
+</body>
+</html>

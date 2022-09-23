@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação Estruturada</title>
+</head>
+<body>
+    <h1>Idade</h1>
+
+    <input id="ns" type="date">
+    <button onclick="idade()">OK</button>
+    <p id="saida"></p>
+    <script>
+        function idade() {
+            var hj = new Date();
+            var n = new Date(document.getElementById('ns').value);
+            var idade = hj.getTime() - n.getTime();
+            var idade1 = new Date(idade);
+            var resultado = idade1.getFullYear() - 1970;
+
+            document.getElementById('saida').innerHTML = resultado;
+        }
+
+
+    </script>
+</body>
+</html>
