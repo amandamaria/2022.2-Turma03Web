@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="01.css" />
+    <title>questão 01</title>
+  </head>
+  <body>
+    <header>  
+      <h1>Cadastro de produtos</h1>
+      
+    </header>
+
+      <form 
+        id="form"
+        target="_blank"
+        action="https://autoria-form.herokuapp.com/"
+        method="POST"
+      >
+        <label for="sku">SKU:</label>
+        <input type="text" name="sku" id="sku" />
+
+        <label for="produto">Produto:</label>
+        <input type="text" name="produto" id="produto" />
+
+        <label for="peso">Peso:</label>
+        <input type="number" name="peso" id="peso" />
+
+        <label for="unidade">Unidade:</label>
+        <select name="unidade" id="unidade">
+          <option value="quilograma">quilograma(kg)</option>
+          <option value="grama">grama(g)</option>
+          <option value="tonelada">tonelada(t)</option>
+        </select>
+
+        <label for="largura">Largura(cm):</label>
+        <input type="number" name="largura" id="largura" />
+
+        <label for="altura">Altura(cm):</label>
+        <input type="number" name="altura(cm)" id="altura" />
+
+        <label for="profundidade">Profundidade(cm):</label>
+        <input type="number" name="profundidade" id="profundidade" />
+
+        <button type="submit">Enviar</button>
+
+        <button type="reset">Limpar</button>
+      </form>
+    </div>
+
+</html>

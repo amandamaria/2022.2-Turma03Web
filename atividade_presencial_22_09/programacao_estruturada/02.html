@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>semana 05 - questão 02</title>
+  </head>
+
+  <body>
+    <button id="button" type="button" onclick="executarExercicio()">
+      Clique aqui!
+    </button>
+    <p id="resultado"></p>
+
+    <script>
+      const executarExercicio = () => {
+        const resultado = document.querySelector("#resultado");
+
+        const currentDate = new Date().toString();
+
+        const year = currentDate.slice(11, 15);
+
+        let month = currentDate.slice(4, 7);
+
+        //Algumas abreviações de meses em inglês são diferentes do português
+        if (month === "Feb") month = "Fev";
+        if (month === "Apr") month = "Abr";
+        if (month === "May") month = "Mai";
+        if (month === "Aug") month = "Ago";
+        if (month === "Sep") month = "Set";
+        if (month === "Oct") month = "Out";
+        if (month === "Dec") month = "Dez";
+        //caso seja diferente o valor de month irá ser reatribuido para a abreviação em protuguês
+
+        const day = currentDate.slice(8, 10);
+
+        const hour = currentDate.slice(16, 18);
+
+        const minutes = currentDate.slice(19, 21);
+
+        resultado.innerHTML = `Data: ${day} de ${month} de ${year} <br>
+                 Hora: ${hour}h${minutes}`;
+      };
+    </script>
+  </body>
+</html>
