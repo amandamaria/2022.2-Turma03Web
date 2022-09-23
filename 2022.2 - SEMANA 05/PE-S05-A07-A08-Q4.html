@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S05-A07-A08-Q4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            PE-S05-A07-A08-Q4
+            <img src="https://www.metropoledigital.ufrn.br/portal/assets/images/IMD_logo_01-01.svg">
+        </div>
+        <div id="semanaData">
+            <span>Semana 05</span>
+            <span>22/09/2022</span>
+        </div>
+        <div id="main">
+
+            <h1>Programação Estruturada</h1>
+
+            <div id="resposta">
+                <p id="resultado">
+                </p>
+
+            </div>
+
+            <form action="">
+                <fieldset>
+                    <legend>Dia da Semana</legend>
+                    <p>
+                        Implemente um programa que apresenta qual o dia da semana (segunda, terça, quarta...) para
+                        uma data específica informada pelo usuário. Por exemplo, se for informado ao algoritmo dia 11,
+                        mês 10 e ano 2021, o algoritmo apresentará Mon (abreviação para segunda-feira, em inglês)
+                        Obs.: O seu algoritmo, ao utilizar o objeto Date vai retornar o dia da semana em inglês, isso
+                        não
+                        é um problema.
+                    </p>
+                    <label for="diaSemana">Dia da Semana:</label>
+                    <input type="text" name="diaSemana" id="diaSemana" pattern="[0-9]{2}/[0-9]{2}/[0-9]{4}" value=""
+                        required data-mask="00/00/0000" placeholder="Insira uma data no FORMATO: 00/00/0000">
+
+
+                    <input type="button" value="Calcular Dia da Semana" onclick="diaDaSemana()">
+                    <input type="reset" value="Limpar" onclick="limpar()">
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            document.getElementById("diaSemana").focus({ focusVisible: true });
+        });
+        function diaDaSemana() {
+
+
+            let texto = document.getElementById("diaSemana").value;
+            texto = texto.trim();
+            const dia = Number(texto.substring(0, texto.indexOf("/")));
+            texto = texto.substring(texto.indexOf("/") + 1);
+            const mes = Number(texto.substring(0, texto.indexOf("/")));
+            texto = texto.substring(texto.indexOf("/") + 1);
+            const ano = Number(texto);
+
+            const date = new Date(ano, (mes - 1), dia);
+            let diaDaSemana = new Date(date).toDateString();
+            diaDaSemana = diaDaSemana.substring(0, diaDaSemana.indexOf(" "));
+
+            if (texto == "" || dia > 31 || mes > 12) {
+                document.getElementById("resultado").innerHTML = "Valor Inválido";
+                document.getElementById("diaSemana").focus({ focusVisible: true });
+            } else {
+                document.getElementById("resultado").innerHTML = "WeekDay: ".concat(diaDaSemana);
+                document.getElementById("diaSemana").focus({ focusVisible: true });
+            }
+        }
+
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+            document.getElementById("diaSemana").focus({ focusVisible: true });
+        }
+    </script>
+</body>
+
+</html>

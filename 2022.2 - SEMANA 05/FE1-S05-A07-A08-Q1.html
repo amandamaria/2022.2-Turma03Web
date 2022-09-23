@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 07</title>
+    <style>
+        #container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+
+        fieldset {
+            width: 80%;
+            border: none;
+        }
+
+        input, select {
+            margin: 0 auto;
+            border-radius: 4px;
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+        }
+
+        label {
+            display: block;
+            width: 100%;
+
+
+        }
+
+        #unidade {
+            border: 2px solid #000;
+            border-radius: 4px;
+            padding: 15px;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        input[type=submit],
+        input[type=reset] {
+            cursor: pointer;
+            width: 20%;
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cadastro de Produtos</h1>
+    <hr>
+
+    <div id="container">
+        <div id="form-container">
+            <form action="https://autoriaform.herokuapp.com/">
+                <fieldset id="form-cadastro">
+
+                    <label for="sku">SKU</label>
+                    <input type="text" id="sku" name="sku">
+
+                    <label for="produto">Produto</label>
+                    <input type="text" id="produto" name="produto">
+
+                    <label for="peso">Peso</label>
+                    <input type="number" id="peso" name="peso">
+
+                    <label for="unidade">Unidade</label>
+                    <select id="unidade" name="unidade">
+                        <option value="quilograma">Quilograma (kg)</option>
+                        <option value="grama">Grama (g)</option>
+                        <option value="tonelada">Tonelada (t)</option>
+                    </select>
+
+                    <label for="largura">Largura (cm)</label>
+                    <input type="number" id="largura" name="largura">
+
+                    <label for="altura">Altura (cm)</label>
+                    <input type="number" id="altura" name="altura">
+
+                    <label for="profundidade">Profundidade (cm)</label>
+                    <input type="number" id="profundidade" name="profundidade">
+
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+
+
+
+                </fieldset>
+
+            </form>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
