@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+ <h1>Questão 5</h1>
+ <h4>Digite seu Nome</h4> <input type="text" id="a"><br/>
+ <button onclick='boasVindas()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+function boasVindas(texto){
+    var texto = "Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital."
+
+    var a = document.getElementById('a').value
+
+    console.log(texto);
+
+    var modificado = texto.replace("{USUARIO}", a);
+
+   document.getElementById('resultado').innerHTML = modificado;
+}
+
+
+ </script>
+</body>
+</html>
