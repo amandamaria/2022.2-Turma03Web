@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S05-A07-A08-Q5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            PE-S05-A07-A08-Q5
+            <img src="https://www.metropoledigital.ufrn.br/portal/assets/images/IMD_logo_01-01.svg">
+        </div>
+        <div id="semanaData">
+            <span>Semana 05</span>
+            <span>22/09/2022</span>
+        </div>
+        <div id="main">
+
+            <h1>Programação Estruturada</h1>
+
+            <div id="resposta">
+                <p id="resultado">
+                </p>
+
+            </div>
+
+            <form action="">
+                <fieldset>
+                    <legend>Mensagem de Boas Vindas</legend>
+                    <p>
+                        Dada a seguinte constante abaixo, crie um algoritmo que irá receber um nome e irá imprimir a
+                        mensagem personalizada substituindo o trecho {USUARIO}pelo nome informado.
+                        const texto = "Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do
+                        Instituto Metrópole Digital.";
+                    </p>
+                    <label for="mensagem">Nome:</label>
+                    <input type="text" name="mensagem" id="mensagem" value="" required
+                        placeholder="Insira uma nome qualquer.">
+
+
+                    <input type="button" value="Mostrar Mensagem" onclick="enviarMensagem()">
+                    <input type="reset" value="Limpar" onclick="limpar()">
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            document.getElementById("mensagem").focus({ focusVisible: true });
+        });
+
+        function enviarMensagem() {
+
+
+            let usuario = document.getElementById("mensagem").value;
+            usuario = usuario.trim();
+            usuario = usuario.toUpperCase();
+
+            if (usuario == "") {
+                document.getElementById("resultado").innerHTML = "Valor Inválido";
+                document.getElementById("mensagem").focus({ focusVisible: true });
+            } else {
+                document.getElementById("resultado").innerHTML = `Olá ${usuario}, seja bem-vindo(a) ao sistema de aulas do<br/>
+                        <strong>Instituto Metrópole Digital</strong>`;
+                document.getElementById("mensagem").focus({ focusVisible: true });
+            }
+        }
+
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+            document.getElementById("mensagem").focus({ focusVisible: true });
+        }
+    </script>
+</body>
+
+</html>

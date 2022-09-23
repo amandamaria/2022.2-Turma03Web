@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S05-A07-A08-Q1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            PE-S05-A07-A08-Q1
+            <img src="https://www.metropoledigital.ufrn.br/portal/assets/images/IMD_logo_01-01.svg">
+        </div>
+        <div id="semanaData">
+            <span>Semana 05</span>
+            <span>22/09/2022</span>
+        </div>
+        <div id="main">
+
+            <h1>Programação Estruturada</h1>
+
+            <form action="">
+                <fieldset>
+                    <legend>Hora Atual</legend>
+                    <p>
+                        Implemente um algoritmo que, a cada acionamento do botão OK é apresentada a
+                        hora, minuto e segundo atual.
+                    </p>
+                    <label for="horaAtual">Hora Atual:</label>
+                    <input name="horaAtual" id="horaAtual" type="text" readonly value=""
+                        placeholder="HORA ATUAL AQUI...">
+
+                    <input type="button" value="OK" onclick="inputRecebeHoraAtual()">
+                </fieldset>
+            </form>
+        </div>
+        <div id="horaCertaContainer">
+            <p id="horaCerta"></p>
+
+        </div>
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+
+    <script>
+        setInterval(horaCerta, 1000);
+
+        function horaCerta() {
+            const date = new Date();
+            document.getElementById("horaCerta").innerHTML = date.toLocaleTimeString();
+        }
+
+        function inputRecebeHoraAtual() {
+            const date = new Date();
+            document.getElementById("horaAtual").value = date.toLocaleTimeString();
+
+        }
+    </script>
+</body>
+
+</html>
