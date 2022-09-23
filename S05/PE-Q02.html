@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q02</title>
+</head>
+<body>
+    <h1>Time</h1>   
+    <button onclick="data()">OK!</button>
+    <p id="data"></p>
+    <p id="hora"></p>
+
+    <script>
+        function data(){
+            var d = new Date();
+        
+            document.getElementById('data').innerHTML = "Data: " + d.toString().slice(8,10) + " de " + d.toString().slice(4,7) + " de " + d.toString().slice(11,15);
+            document.getElementById('hora').innerHTML = "Hora: " + d.toString().slice(16,18) + "h" + d.toString().slice(19,21);
+        }
+    </script>
+</body>
+</html>

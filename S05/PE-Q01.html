@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q01</title>
+    <style>
+        #hr{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16pt;
+            font: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time</h1>
+    
+    <button onclick="hora()">OK!</button>
+    <p id="hr"></p>
+    
+    <script>
+        function hora(){
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            document.getElementById('hr').innerHTML = "Hora: " + h + ":" + m + ":" + s;
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q05</title>
+</head>
+<body>
+    <h1>Boas vindas!</h1>
+
+    <div>
+        <input type="text" name="nome" id="nome">
+        <button onclick="b_vindo()">OK!</button>
+    </div>
+
+    <div>
+        <p id="boas_vindas"></p>
+    </div>
+
+    <script>
+        function b_vindo(){
+            var usuario = document.getElementById('nome').value;
+            const texto = `Olá {USUARIO}, seja bem-vindo(a) ao sistema aulas do Instituto Metrópole Digital.`;
+            var n_texto = texto.replace("{USUARIO}", usuario);
+
+            document.getElementById('boas_vindas').innerHTML = n_texto;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-Q01.css">
+    <title>DFE I-Q01</title>
+</head>
+
+<body>
+    <h1>Cadastro de produtos</h1>
+    <hr>
+
+    <form action="https://autoria-form.herokuapp.com/" method="get">
+        <label for="sku">SKU:</label>
+        <input id="sku" type="text" name="sku">
+        <label for="produto">Produto:</label>
+        <input id="produto" type="text" name="produto">
+        <label for="peso">Peso:</label>
+        <input id="peso" type="number" name="peso">
+        <label for="unidade">Unidade:</label>
+        <select name="unidade" id="unidade">
+            <option value="quilograma">quilograma (kg)</option>
+            <option value="grama">grama (g)</option>
+            <option value="tonelada">tonelada (t)</option>
+        </select><br>
+        <label for="largura">Largura (cm):</label>
+        <input id="largura" type="number" name="largura">
+        <label for="altura">Altura (cm):</label>
+        <input id="altura" type="number" name="altura">
+        <label for="profundidade">Profundidade (cm):</label>
+        <input id="profundidade" type="number" name="profundidade">
+        <div display: block;>
+            <button type="submit">Enviar</button>
+            <button type="reset">Limpar</button>
+        </div>
+    </form>
+</body>
+</html>

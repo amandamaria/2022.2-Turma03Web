@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q04</title>
+</head>
+<body>
+    <h1>Dia da Semana</h1>
+    
+    <input type="date" name="data" id="data">
+    <button onclick="data()">OK!</button>
+    <p id="dia_sem"></p>
+
+    <script>
+        function data(){
+            var dia = new Date(document.getElementById('data').value);
+            var dia_sem = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"];
+            
+            document.getElementById("dia_sem").innerHTML = "O dia é: " + dia_sem[dia.getDay()];
+        }
+    </script>
+</body>
+</html>
