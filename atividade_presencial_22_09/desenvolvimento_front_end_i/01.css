@@ -1,0 +1,44 @@
+* {
+  font-family: "Arial", Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 90%;
+  margin-inline: auto;
+  margin-bottom: 40px;
+}
+
+h1 {
+  font-size: 24px;
+  border-bottom: 1px solid #000;
+  padding: 20px 20px 20px 0;
+}
+
+#form {
+  width: 80%;
+  display: block;
+  margin-inline: auto;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+select {
+  display: block;
+  margin-bottom: 15px;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+button {
+  width: 20%;
+  padding: 15px;
+}

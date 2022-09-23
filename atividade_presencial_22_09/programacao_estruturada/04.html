@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>semana 05 - questão 04</title>
+  </head>
+
+  <body>
+    <label for="currentDate">Data</label>
+    <input type="date" id="currentDate" />
+    <button id="button" type="button" onclick="executarExercicio()">
+      Cliquei aqui!
+    </button>
+    <p id="resultado"></p>
+
+    <script>
+      const executarExercicio = () => {
+        const currentDate = new Date(
+          document.querySelector("#currentDate").value
+        );
+        const resultado = document.querySelector("#resultado");
+
+        let currentDay = String(currentDate).slice(0, 3);
+
+        // tratando o problema de conversão do input, pois o valor do input está no horário GMT.
+        // Quando transformamos a data fornecida no input para um new Date(), automaticamente o JS
+        // converte a data GMT para GMT-03(fuso do Brasil) e assim a data fica do dia anterior as 21hrs.
+        if (currentDay === "Mon") currentDay = "Ter";
+        if (currentDay === "Tue") currentDay = "Qua";
+        if (currentDay === "Wed") currentDay = "Qui";
+        if (currentDay === "Thu") currentDay = "Sex";
+        if (currentDay === "Fri") currentDay = "Sab";
+        if (currentDay === "Sat") currentDay = "Dom";
+        if (currentDay === "Sun") currentDay = "Seg";
+        //O valor de currenteDay será reatribuido para um dia a mais(e em abreviações em)
+
+        resultado.innerHTML = currentDay;
+      };
+    </script>
+  </body>
+</html>

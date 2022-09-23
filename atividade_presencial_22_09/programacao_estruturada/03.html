@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>semana 05 - questão 03</title>
+  </head>
+
+  <body>
+    <label for="birthDate">Data de nascimento</label>
+    <input type="date" id="birthDate" />
+    <button id="button" type="button" onclick="executarExercicio()">
+      Cliquei aqui!
+    </button>
+    <p id="resultado"></p>
+
+    <script>
+      const executarExercicio = () => {
+        const birthDate = new Date(
+          document.querySelector("#birthDate").value
+        ).getTime();
+        const resultado = document.querySelector("#resultado");
+
+        const currentDate = new Date().getTime();
+
+        const age = new Date(currentDate - birthDate);
+        const ageFortmatted = Math.abs(age.getUTCFullYear() - 1970);
+
+        resultado.innerHTML = ageFortmatted;
+      };
+    </script>
+  </body>
+</html>
