@@ -1,0 +1,29 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+ <h1>Questão 3</h1>
+ <h4>Data Aniversário</h4> <input type="date" id="a"><br/>
+ <button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ var a = new Date(document.getElementById('a').value);
+ // Escreva seus algoritmos a partir daqui.
+ console.log(a.getFullYear());
+
+ var r = calculaIdade(a.getFullYear()); // atribua os resultados dos algoritmos a r
+
+ document.getElementById('resultado').innerHTML = r;
+ }
+
+function calculaIdade(dataAniversario){
+    return "Sua idade é de " + (new Date().getFullYear() - dataAniversario) + " anos.";
+}
+
+
+ </script>
+</body>
+</html>

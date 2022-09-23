@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Formulário de Produtos</title>
+	<style type="text/css">
+		body{
+			font-family: "Arial, Helvetica, sans-serif";
+		}
+
+		input[type=text]{
+			width: 80%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+		}
+		input[type=number]{
+			width: 80%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+		}
+		select{
+			width: 80%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+		}
+		button{
+			width: 20%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+		}
+		input[type=submit]{
+			width: 20%;
+			padding: 15px;
+			border-radius: 4px;
+			margin-bottom: 15px;
+		}
+		form{
+			margin-left: 200px;
+			margin-top: 50px;
+		}
+
+	</style>
+
+
+</head>
+<body>
+	<h1> Cadastro de produtos </h1>
+	<hr>
+
+	<form action="https://autoria-form.herokuapp.com/" method="GET">
+
+		<label>SKU:</label>
+			<br/>
+				<input type="text" name="SKU" id="sku" />
+			<br/>
+		<label>Produto:</label>
+			<br/>
+				<input type="text" name="Produto" id="produto" />
+			<br/>
+		<label>Peso:</label>
+			<br/>
+				<input type="number" name="Peso" id="peso" />	
+			<br/>
+		<label>Unidade:</label>
+			<br/>
+				<select name="Unidade" id="unidade">
+					<option>quilograma (kg)</option>
+					<option>grama (g)</option>
+					<option>tonelada (t)</option>
+				</select>
+			<br/>
+		<label>Largura (cm):</label>
+			<br/>
+				<input type="number" name="Largura" id="largura" />	
+			<br/>
+		<label>Altura (cm):</label>
+			<br/>
+				<input type="number" name="Altura" id="altura" />	
+			<br/>
+		<label>Profundidade (cm):</label>	
+			<br/>
+				<input type="number" name="Profundidade" id="profundidade" />
+			<br/>
+
+		<input type="submit" value="Enviar" id="enviar"> </input>
+		<button onclick="apagarDados()" value="Cancelar"> Cancelar  </button>
+	</form>
+</body>
+
+<script type="text/javascript">
+	function apagarDados(){
+		document.getElementById('sku').value = ""; 
+		document.getElementById('produto').value = "";
+		document.getElementById('peso').value = null; 
+		document.getElementById('largura').value = null;
+		document.getElementById('altura').value = null; 
+		document.getElementById('profundidade').value = null;	
+}
+
+</script>
+
+
+</html>
