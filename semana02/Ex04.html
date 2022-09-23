@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>Exercicio - 04</h1>
+    a: <input type="number" id="a" value=""><br /><br>
+    b: <input type="number" id="b" value=""><br /><br>
+    c: <input type="number" id="c" value=""><br /><br>
+    <button onclick='executarExercicio()'>OK</button>
+
+    <p id="resultado"></p>
+    <script>
+        function executarExercicio() {
+            let a = Number(document.getElementById('a').value);
+            let b = Number(document.getElementById('b').value);
+            let c = Number(document.getElementById('c').value);
+
+            let r = (a + b + c)/3
+            document.getElementById('resultado').innerHTML = (`A média entre os números ${a}, ${b} e ${c} é ${r}.`);
+        }
+            
+    </script>
+</body>
+
+</html>

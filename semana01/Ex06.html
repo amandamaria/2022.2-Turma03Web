@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Programacao Estruturada</title>
+    </head>
+    <body>
+        <h1>Exercicio - 06</h1>
+
+        Numero: <input type="number" id="ultimoNumero" value="">
+        <button onclick="ultimoNumero()">Clique aqui</button>
+
+        <script>
+            function ultimoNumero() {
+                let x = Number(document.getElementById("ultimoNumero").value);
+
+                let y = x % 10;
+                alert("O ultimo digito do numero digitado é: " + y);
+                
+            }
+        </script>
+    </body>
+</html>
