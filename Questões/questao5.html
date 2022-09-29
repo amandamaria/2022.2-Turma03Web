@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Questão 5</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado" ></p>
+ <script>
+ function executarExercicio() {
+var a = Number(document.getElementById('a').value);
+ // implemente a partir daqui
+ r = divisoresNumero(a); // atribua o resultado dos seus algoritmos a r
+  document.getElementById('resultado').innerHTML = r;
+ }
+
+function divisoresNumero(x){
+    var div = 0;
+    var texto1, texto;
+
+    for(var i = 1; i < x; i++){
+        if(x % i == 0){
+            div = i;
+            texto = div + " , ";
+            texto1 += texto;
+        }
+    }
+
+    return texto1.replace("undefined", "Os divisores são: ");
+
+}
+
+ </script>
+</body>
+</html>

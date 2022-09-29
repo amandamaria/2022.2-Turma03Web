@@ -1,0 +1,109 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Questão 7</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultadowhile" ></p>
+ <script>
+ function executarExercicio() {
+var a = Number(document.getElementById('a').value);
+
+ // implemente a partir daqui
+ r = idEstado(a);
+ // atribua o resultado dos seus algoritmos a r
+  document.getElementById('resultadowhile').innerHTML = r;
+ }
+
+ function idEstado(ddd){
+    if(ddd == 11){
+        return "São Paulo";
+    }
+    else if(ddd == 21){
+        return "Rio de Janeiro";
+    }
+    else if(ddd == 27){
+        return "Espírito Santo";
+    }
+    else if(ddd == 31){
+        return "Minas Gerais";
+    }
+    else if(ddd == 41){
+        return "Paraná";
+    }
+    else if(ddd == 47){
+        return "Santa Catarina";
+    }
+    else if(ddd == 51){
+        return "Rio Grande do Sul";
+    }
+    else if(ddd == 61){
+        return "Distrito Federal";
+    }
+    else if(ddd == 62){
+        return "Goiás";
+    }
+    else if(ddd == 63){
+        return "Tocantins";
+    }
+    else if(ddd == 65){
+        return "Mato Grosso";
+    }
+    else if(ddd == 67){
+        return "Mato Grosso do Sul";
+    }
+    else if(ddd == 68){
+        return "Acre";
+    }
+    else if(ddd == 69){
+        return "Rondônia";
+    }
+    else if(ddd == 71){
+        return "Bahia";
+    }
+    else if(ddd == 79){
+        return "Sergipe";
+    }
+    else if(ddd == 81){
+        return "Pernambuco";
+    }
+    else if(ddd == 82){
+        return "Alagoas";
+    }
+    else if(ddd == 83){
+        return "Paraíba";
+    }
+    else if(ddd == 84){
+        return "Rio Grande do Norte";
+    }
+    else if(ddd == 85){
+        return "Ceará";
+    }
+    else if(ddd == 86){
+        return "Piauí";
+    }
+    else if(ddd == 91){
+        return "Pará";
+    }
+    else if(ddd == 92){
+        return "Amazonas";
+    }
+    else if(ddd == 95){
+        return "Roraima";
+    }
+    else if(ddd == 96){
+        return "Amapá";
+    }
+    else if(ddd == 98){
+        return "Maranhão";
+    }
+    return "Não existe esse DDD";
+ }
+
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Questão 6</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+N2: <input type="number" id="b" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+<h3> Com While </h3>
+ <p id="resultadowhile" ></p>
+ <h3> Com For </h3>
+ <p id="resultadofor" ></p>
+ <script>
+ function executarExercicio() {
+var a = Number(document.getElementById('a').value);
+var b = Number(document.getElementById('b').value);
+ // implemente a partir daqui
+ r = somaNumerosPares(a, b);
+ s = somaNumerosImpares(a, b);
+ t = somaNumerosParesfor(a , b);
+ u = somaNumerosImparesfor(a, b);
+ // atribua o resultado dos seus algoritmos a r
+  document.getElementById('resultadowhile').innerHTML = "Soma dos números pares: " + r + "<br/>" + "Soma dos números ímpares: " + s;
+  document.getElementById('resultadofor').innerHTML = "Soma dos números pares: " + t + "<br/>" + "Soma dos números ímpares: " + u;
+ }
+
+function somaNumerosPares(x, y){
+    var i = x, soma = 0;
+
+    while(i <= y){
+
+        if(i % 2 == 0){
+            soma += i;    
+        }
+        
+        i+=1;
+    }
+
+    return soma;
+
+}
+
+function somaNumerosImpares(x, y){
+    var i = x, soma = 0;
+
+    while(i <= y){
+
+        if(i % 2 != 0){
+            soma += i;    
+        }
+        
+        i+=1;
+    }
+
+    return soma;
+
+}
+
+function somaNumerosParesfor(x, y){
+    var soma = 0;
+
+    for(var i = x; i <= y; i++){
+        
+        if(i % 2 == 0){
+            soma += i;    
+        }
+        
+    }
+
+    return soma;
+
+}
+
+function somaNumerosImparesfor(x, y){
+    var soma = 0;
+
+    for(var i = x; i <= y; i++){
+
+        if(i % 2 != 0){
+            soma += i;    
+        }
+        
+    }
+
+    return soma;
+
+}
+
+
+
+
+ </script>
+</body>
+</html>

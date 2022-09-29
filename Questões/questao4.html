@@ -1,0 +1,35 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Questão 4</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+N1: <input type="number" id="a" value=""><br />
+N2: <input type="number" id="b" value=""><br />
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ var a = Number(document.getElementById('a').value);
+ var b = Number(document.getElementById('b').value);
+ // implemente a partir daqui
+ var r = somaElementos(a, b); // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = "A soma de todos os números de" + a + " até " + b + " é " + r;
+ }
+
+function somaElementos(x, y){
+    var soma = 0, i = x;
+
+    do{
+        soma += i;
+        i+=1;
+    }
+    while(i <= y);
+
+    return soma;
+}
+
+ </script>
+</body>
+</html>
