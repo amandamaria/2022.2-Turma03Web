@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+        <h1>Entrada do Programa</h1>
+        X: <input type="number" id="x" value="">
+        <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var x = Number(document.getElementById('x').value)
+                var r = ''
+                for(var i = 1; i <= x; i++){
+                    var resto = x % i
+                    if(resto == 0){
+                        r = r + i + ' é divisor de ' + x + '<br>'
+                    }
+                }
+                document.getElementById('resultado').innerHTML  = r
+            }
+        </script>
+    </body>
+</html>
