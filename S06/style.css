@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+    background-color: rgb(84, 97, 114);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+
+}
+
+#geral{
+    background-color: rgb(80, 135, 154);
+    width: 1080px;
+    margin: auto;
+}
+
+#conteudo{
+    padding: 16px;
+}
+
+a:link{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.699);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+#topo{
+    padding: 4px;
+    background-color: rgb(12, 17, 88);;
+    text-align: right;
+    padding-right: 16px;
+}
+
+.menu{
+    list-style: none;
+    padding: 10px;
+}
+
+#navegação{
+    background-color: rgb(12, 17, 88);
+    margin: 0px;
+    position: sticky;
+    top: 4px;
+}
+
+#destaque{
+    height: 300px;
+    margin: 0px;
+    background-color: blueviolet;
+}
+
+.menu > li{
+    display: inline;
+    padding: 16px;
+}
+
+#rodape{
+    background-color: rgb(107, 107, 107);
+    padding: 16px;
+    text-align: center;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            padding: 10px;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+
+        div {
+            width: 350px;
+            height: 350px;
+            padding: 10px;
+            margin: 10px;
+            background-color: bisque;
+            border: solid 2px lightsalmon;
+            border-radius: 30px;
+        }
+
+        button {
+            background-color: burlywood;
+            font-family: Arial, Helvetica, sans-serif;
+            font: 14pt blacK;
+            padding: 2px;
+            display: flex;
+            margin: auto;
+        }
+
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            display: inline-flex;
+            align-items: center;
+            width: 200px;
+            height: 10px;
+            padding: 5px;
+            
+        }
+
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 12pt;
+            color: black;
+        }
+
+        #resposta{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <title>PE-Q07</title>
+</head>
+
+<body>
+    <div>
+        <h1>Localizar DDD</h1>
+        <label>DDD:</label> <input type="number" id="x" value=""><br>
+        <button onclick="executar()">Consultar</button>
+        <p id="resposta"></p>
+    </div>
+
+    <script>
+        function executar() {
+            var ddd = Number(document.getElementById('x').value);
+            var estado = "";
+
+            switch (ddd) {
+                case 11:
+                    estado = "São Paulo";
+                    break;
+                case 21:
+                    estado = "Rio de Janeiro";
+                    break;
+                case 27:
+                    estado = "Espírito Santo";
+                    break;
+                case 31:
+                    estado = "Minas Gerais";
+                    break;
+                case 41:
+                    estado = "Paraná";
+                    break;
+                case 47:
+                    estado = "Santa Catarina";
+                    break;
+                case 51:
+                    estado = "Rio Grande do Sul";
+                case 61:
+                    estado = "Distrito Federal";
+                    break;
+                case 62:
+                    estado = "Goiás";
+                    break;
+                case 63:
+                    estado = "Tocantins";
+                    break;
+                case 65:
+                    estado = "Mato Grosso";
+                    break;
+                case 67:
+                    estado = "Mato Grosso do Sul";
+                    break;
+                case 68:
+                    estado = "Acre";
+                    break;
+                case 69:
+                    estado = "Rondônia";
+                    break;
+                case 71:
+                    estado = "Bahia";
+                    break;
+                case 79:
+                    estado = "Sergipe";
+                    break;
+                case 81:
+                    estado = "Pernambuco";
+                    break;
+                case 82:
+                    estado = "Alagoas";
+                    break;
+                case 83:
+                    estado = "Paraíba";
+                    break;
+                case 84:
+                    estado = "Rio Grande do Norte";
+                    break;
+                case 85:
+                    estado = "Ceará";
+                    break;
+                case 86:
+                    estado = "Piauí";
+                    break;
+                case 91:
+                    estado = "Pará";
+                    break;
+                case 92:
+                    estado = "Amazonas";
+                    break;
+                case 95:
+                    estado = "Roraima";
+                    break;
+                case 96:
+                    estado = "Amapá";
+                    break;
+                case 98:
+                    estado = "Maranhão";
+                    break;
+                default:
+                    estado = "DDD não encontrado!";
+            }
+            document.getElementById('resposta').innerHTML = estado;
+        }
+
+    </script>
+</body>
+
+</html>

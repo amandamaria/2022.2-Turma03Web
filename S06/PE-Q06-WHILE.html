@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            padding: 10px;
+            margin: 10px;
+            margin-bottom: 20px;
+        }
+
+        div {
+            width: 350px;
+            height: 450px;
+            padding: 10px;
+            margin: 10px;
+            background-color: bisque;
+            border: solid 2px lightsalmon;
+            border-radius: 30px;
+        }
+
+        button {
+            background-color: burlywood;
+            font-family: Arial, Helvetica, sans-serif;
+            font: 14pt blacK;
+            padding: 2px;
+            display: flex;
+            margin: auto;
+        }
+
+        input{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 20px;
+            display: inline-flex;
+            align-items: center;
+            width: 200px;
+            height: 10px;
+            padding: 5px;
+            
+        }
+
+        label{
+            font-family: Arial, Helvetica, sans-serif;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            font-size: 12pt;
+            color: black;
+        }
+
+        .resposta{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12pt;
+            margin: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <title>PE-Q06</title>
+</head>
+
+<body>
+    <div>
+        <h1>Soma de números</h1>
+        <label>N1:</label><input type="number" id="a" value=""><br />
+        <label>N2:</label><input type="number" id="b" value=""><br />
+        <button onclick="soma()">Somar</button>
+        <p class="resposta" id="res_par"></p>
+        <p class="resposta" id="res_imp"></p>
+    </div>
+
+    <script>
+        function soma() {
+            var x = Number(document.getElementById('a').value);
+            var y = Number(document.getElementById('b').value);
+            var soma_par = 0;
+            var soma_imp = 0;
+
+            var min = Math.min(x, y);
+            var max = Math.max(x, y);
+
+            var i=min;
+
+            while (i <= max) {
+                if (i%2==0){
+                    soma_par = soma_par + i;
+                }
+                else{
+                    soma_imp = soma_imp + i;
+                }
+                i++;
+            }
+            document.getElementById('res_par').innerHTML = `A soma dos números pares entre ${min} e ${max} é: ${soma_par}`;
+            document.getElementById('res_imp').innerHTML = `A soma dos números ímpares entre ${min} e ${max} é: ${soma_imp}`;
+        }
+    </script>
+</body>
+
+</html>
