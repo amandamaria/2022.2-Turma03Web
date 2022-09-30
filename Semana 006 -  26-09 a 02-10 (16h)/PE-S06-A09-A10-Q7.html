@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S06-A09-A10-Q7</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Exercício 7
+    Escreva um programa que recebe um número de DDD (sem o zero)
+    e apresenta a qual estado aquele número pertence.
+    Caso o número digitado não esteja presente na tabela abaixo,
+    o programa deverá imprimir a mensagem DDD não encontrado. -->
+
+    <div class="container">
+        <h1>PE-S06-A09-A10-Q7</h1>
+
+        <div id="resposta">
+            <p id="resultado">
+
+            </p>
+        </div>
+
+        <div id="consulta">
+            <form class="consulta" action="">
+                <fieldset>
+                    <legend>Consulta DDD</legend>
+
+                    <strong>Exercício 7</strong>
+                    <p>
+                        Escreva um programa que recebe um número de DDD (sem o zero)
+                        e apresenta a qual estado aquele número pertence.
+                        Caso o número digitado não esteja presente na tabela abaixo,
+                        o programa deverá imprimir a mensagem DDD não encontrado.
+                    </p>
+
+
+                    <label for="ddd">DDD:</label>
+                    <input name="ddd" id="ddd" type="number" pattern="[0-9]{2}" data-mask="00">
+
+                    <input type="button" value="Consultar" onclick="consultarDDD()">
+                    <input type="reset" value="Limpar" onclick="limpar()">
+
+
+                </fieldset>
+
+            </form>
+        </div>
+
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+
+    </div>
+    <script>
+        var codigoDDD = [11, 21, 27, 31, 41, 47, 51, 61, 62, 63, 65, 67, 68, 69, 71, 79, 81, 82, 83, 84, 85, 86, 91, 92, 95, 96, 98];
+        var cidadeDDD = ["São Paulo", "Rio de Janeiro", "Espírito Santo", "Minas Gerais", "Paraná", "Santa Catarina", "Rio Grande do Sul", "Distrito Federal", "Goiás", "Tocantins", "Mato Grosso", "Mato Grosso do Sul", "Acre", "Rondônia", "Bahia", "Sergipe", "Pernambuco", "Alagoas", "Paraíba", "Rio Grande do Norte", "Ceará", "Piauí", "Pará", "Amazonas", "Roraima", "Amapá", "Maranhão"];
+
+        function limpar() {
+            document.getElementById("ddd").innerHTML = "";
+            document.getElementById("resultado").innerHTML = "";
+        }
+
+        function consultarDDD() {
+            const ddd = document.getElementById("ddd").value;
+            if (ddd == null || ddd == "") {
+                document.getElementById("resultado").innerHTML = "Valor inválido...";
+            } else {
+                posicao = codigoDDD.indexOf(Number(ddd));
+                if (posicao < 0) {
+                    document.getElementById("resultado").innerHTML = "DDD não encontrado";
+                } else {
+                    let indice = cidadeDDD[posicao];
+                    document.getElementById("resultado").innerHTML = cidadeDDD[posicao];
+                }
+            }
+        }
+    </script>
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
+
+</body>
+
+</html>

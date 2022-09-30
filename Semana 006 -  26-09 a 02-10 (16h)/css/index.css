@@ -1,0 +1,109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgb(26, 51, 82), rgb(37,88,151));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#logo{
+    height: 35px;
+}
+#logo-facebook,
+#logo-instagram{
+    padding: 1px;
+    width: 20px;
+    height: 20px;
+}
+#container {
+    background-color: white;
+    width: 1080px;
+    margin: auto;
+}
+
+#destaque {
+    width: 100%;
+    height: 300px;
+    background: url(../img/background.jpg) center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#main{
+    padding: 16px;
+}
+
+#topo{
+    position: sticky;
+    top:0px;
+    height: 40px;
+    text-align: right;
+    background-color: rgb(50, 50, 50);
+    padding: 4px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    
+}
+
+#navegacao {
+    background-color: rgb(50, 50, 50);
+    padding: 15px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    position: sticky;
+    top: 40px;
+
+}
+
+nav ul li{
+    list-style-type: none;
+    padding: 4px;
+    display:inline-block;
+    align-items: center;
+    justify-content:center;
+
+}
+
+a{
+    transition: .3s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+a:hover{
+    transition: .3s;
+    text-decoration: underline;
+    color: rgb(64, 119, 192);
+    font-weight: bold;
+}
+
+.artigo > p, h1{
+    text-align: center;
+    padding: 10px;
+    margin: auto;
+}
+
+.artigo > img {
+    width: 600px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+footer{
+    background-color: rgb(50, 50, 50);   
+    text-align: center;
+    padding: 16px;
+}

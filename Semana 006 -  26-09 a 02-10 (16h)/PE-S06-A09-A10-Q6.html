@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S06-A09-A10-Q6</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Exercício 6
+    Construa um programa que recebe dois números e apresenta a soma de todos os números 
+    pares e de todos os números ímpares entre os números fornecidos.
+    Exemplo: o programa recebe os números 36 e 78. A saída apresentada pelo programa será:
+    Soma dos números pares: 1254
+    Soma dos números ímpares: 1197
+    Apresente duas respostas de solução: uma utilizando o for e a outra o while. -->
+
+    <div class="container">
+        <h1>PE-S06-A09-A10-Q6</h1>
+
+        <div id="resposta">
+            <p id="resultado">
+
+            </p>
+        </div>
+
+        <div id="resposta2">
+            <p id="resultado2">
+
+            </p>
+        </div>
+
+        <form class="entrada" action="">
+            <fieldset>
+                <legend>Soma do Intervalo / Pares e Impares</legend>
+
+                <strong>Exercício 6</strong>
+                <p>
+                    Construa um programa que recebe dois números e apresenta a soma de todos os números
+                    pares e de todos os números ímpares entre os números fornecidos.
+                    Exemplo: o programa recebe os números 36 e 78.
+                    A saída apresentada pelo programa será: <br>
+                    Soma dos números pares: 1254 <br>
+                    Soma dos números ímpares: 1197 <br>
+                    Apresente duas respostas de solução: uma utilizando o for e a outra o while.
+                </p>
+
+                <label for="numero1">X:</label>
+                <input name="numero1" id="numero1" type="number">
+
+
+                <label for="numero2">Y:</label>
+                <input name="numero2" id="numero2" type="number">
+                <input type="button" value="OK" onclick="somarIntervalo()">
+                <input type="reset" value="Limpar" onclick="limpar()">
+
+
+            </fieldset>
+
+        </form>
+
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+    <script>
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+            document.getElementById("resultado2").innerHTML = "";
+        }
+
+        function somarIntervalo() {
+            let somaPar = 0;
+            let somaImpar = 0;
+            let somaParWhile = 0;
+            let somaImparWhile = 0;
+            let x = Number(document.getElementById("numero1").value);
+            let y = Number(document.getElementById("numero2").value);
+            //usando FOR:
+            if (x < y) {
+                for (let i = x; i <= y; i++) {
+                    if (i % 2 == 0) {
+                        somaPar = somaPar + i;
+                    } else {
+                        somaImpar = somaImpar + i;
+                    }
+                }
+                const mensagemUsandoFor = `Usando FOR: <br/> 
+                Soma dos números PARES: ${somaPar} <br/>
+                Soma dos números IMPARES: ${somaImpar}`;
+                document.getElementById("resultado").innerHTML = mensagemUsandoFor;
+                //usando WHILE:
+                while (x <= y) {
+                    if (x % 2 == 0) {
+                        somaParWhile = somaParWhile + x;
+                        x++;
+                    } else {
+                        somaImparWhile = somaImparWhile + x;
+                        x++;
+                    }
+                }
+                const mensagemUsandoWhile = `Usando WHILE: <br/> 
+                Soma dos números PARES: ${somaParWhile} <br/>
+                Soma dos números IMPARES: ${somaImparWhile}`;
+                document.getElementById("resultado2").innerHTML = mensagemUsandoWhile;
+
+            } else if (y < x) {
+                for (let i = y; i <= x; i++) {
+                    if (i % 2 == 0) {
+                        somaPar = somaPar + i;
+                    } else {
+                        somaImpar = somaImpar + i;
+                    }
+                }
+                const mensagemUsandoFor = `Usando FOR: <br/> 
+                Soma dos números PARES: ${somaPar} <br/>
+                Soma dos números IMPARES: ${somaImpar}`;
+                document.getElementById("resultado").innerHTML = mensagemUsandoFor;
+                //usando WHILE:
+                while (y <= x) {
+                    if (y % 2 == 0) {
+                        somaParWhile = somaParWhile + y;
+                        y++;
+                    } else {
+                        somaImparWhile = somaImparWhile + y;
+                        y++
+                    }
+                }
+                const mensagemUsandoWhile = `Usando WHILE: <br/> 
+                Soma dos números PARES: ${somaParWhile} <br/>
+                Soma dos números IMPARES: ${somaImparWhile}`;
+                document.getElementById("resultado2").innerHTML = mensagemUsandoWhile;
+
+            } else {
+                document.getElementById("resultado").innerHTML = x;
+                document.getElementById("resultado2").innerHTML = x;
+            }
+        }
+    </script>
+</body>
+
+</html>
