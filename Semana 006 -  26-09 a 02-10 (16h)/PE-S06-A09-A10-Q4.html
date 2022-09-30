@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S06-A09-A10-Q4</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+
+    <!-- Exercício 4
+    Utilizando o comando do-while, construa um algoritmo que recebe dois números X e Y 
+    e que imprime a soma de todos os números de X até Y. -->
+
+    <div class="container">
+        <h1>PE-S06-A09-A10-Q4</h1>
+
+        <div id="resposta">
+            <p id="resultado">
+
+            </p>
+        </div>
+
+        <form class="entrada" action="">
+            <fieldset>
+                <legend>Soma do Intervalo (do-while)</legend>
+
+                <strong>Exercício 4</strong>
+                <p>
+                    Utilizando o comando do-while, construa um algoritmo que recebe dois números X e Y
+                    e que imprime a soma de todos os números de X até Y.
+                </p>
+
+                <label for="numero1">X:</label>
+                <input name="numero1" id="numero1" type="number">
+
+
+                <label for="numero2">Y:</label>
+                <input name="numero2" id="numero2" type="number">
+                <input type="button" value="OK" onclick="somarIntervalo()">
+                <input type="reset" value="Limpar" onclick="limpar()">
+
+
+            </fieldset>
+
+        </form>
+
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+    <script>
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+        }
+
+        function somarIntervalo() {
+            let soma = 0;
+            let x = Number(document.getElementById("numero1").value);
+            let y = Number(document.getElementById("numero2").value);
+
+            if (x < y) {
+                do {
+                    soma = soma + x;
+                    x++;
+                } while (x <= y);
+                document.getElementById("resultado").innerHTML = soma;
+                //alert(soma = y*(x + y) / 2);
+            } else if (y < x) {
+                do {
+                    soma = soma + y;
+                    y++;
+                } while (y <= x);
+                document.getElementById("resultado").innerHTML = soma;
+            } else {
+                document.getElementById("resultado").innerHTML = x;
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

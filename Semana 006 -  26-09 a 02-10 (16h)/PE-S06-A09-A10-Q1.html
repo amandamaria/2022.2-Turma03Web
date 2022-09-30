@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S06-A09-A10-Q1</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+    <!-- Exercício 1
+        Construa um programa que recebe um número e verifica se ele é positivo ou negativo. 
+        Caso o número seja zero o seu programa retorna a mensagem “o valor é zero”. -->
+
+    <div class="container">
+        <h1>PE-S06-A09-A10-Q1</h1>
+
+        <div id="resposta">
+            <p id="resultado">
+
+            </p>
+        </div>
+
+
+
+        <form class="entrada" action="">
+            <fieldset>
+                <legend>Números Positivos, Negativos e Nulos</legend>
+                <strong>Exercício 1</strong>
+                <p>
+                    Construa um programa que recebe um número e verifica se ele 
+                    é positivo ou negativo.
+                    Caso o número seja zero o seu programa retorna a mensagem “o valor é zero”.
+                </p>
+
+
+                <label for="numero">Insira um número qualquer...</label>
+                <input name="numero" id="numero" type="number">
+                <input type="button" value="ok" onclick="verificarNumero()">
+                <input type="reset" value="limpar" onclick="limpar()">
+            </fieldset>
+
+        </form>
+
+
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+    <script>
+
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+        }
+        function verificarNumero() {
+            const numero = document.getElementById("numero").value;
+            if (numero == "") {
+                document.getElementById("resultado").innerHTML = "valor INVÁLIDO, favor tentar novamente...";
+            } else if (Number(numero) > 0) {
+                document.getElementById("resultado").innerHTML = "O número é POSITIVO";
+            } else if (Number(numero) < 0) {
+                document.getElementById("resultado").innerHTML = "O número é NEGATIVO";
+            }
+            else {
+                document.getElementById("resultado").innerHTML = "O valor é ZERO";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

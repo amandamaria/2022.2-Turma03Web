@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-S06-A09-A10-Q5</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Exercício 5
+    Construa um programa que receberá um número e que apresentará todos os seus divisores a 
+    partir do número 1. Os números devem estar um ao lado do outro.
+    Exemplo: se o número fornecido for 10, o programa imprimirá os números: 1, 2 e 5. -->
+
+    <div class="container">
+        <h1>PE-S06-A09-A10-Q5</h1>
+
+        <div id="resposta">
+            <p id="resultado">
+
+            </p>
+        </div>
+
+        <form class="entrada" action="">
+            <fieldset>
+                <legend>Divisores de um Número</legend>
+
+                <strong>Exercício 5</strong>
+                <p>
+                    Construa um programa que receberá um número e que apresentará todos os seus divisores a
+                    partir do número 1. Os números devem estar um ao lado do outro.
+                    Exemplo: se o número fornecido for 10, o programa imprimirá os números: 1, 2 e 5.
+                </p>
+
+
+                <label for="dividendo">Dividendo:</label>
+                <input name="dividendo" id="dividendo" type="number">
+
+                <input type="button" value="OK" onclick="listarDivisores()">
+                <input type="reset" value="Limpar" onclick="limpar()">
+
+
+            </fieldset>
+
+        </form>
+
+        <div>
+            <input id="voltar" type="button" value="Voltar" onclick="window.location.href='index.html';"></a>
+        </div>
+    </div>
+
+    <script>
+        function limpar() {
+            document.getElementById("resultado").innerHTML = "";
+            $("#resultado").focus();
+        }
+
+        function listarDivisores() {
+
+            let divisores = [];
+            const dividendo = Number(document.getElementById("dividendo").value);
+            if (dividendo == "" || dividendo == null) {
+                document.getElementById("resultado").innerHTML = "Insira um valor VÁLIDO";
+            } else {
+                for (i = 1; i < dividendo; i++) {
+                    if (dividendo % i == 0) {
+                        divisores.push(i);
+                    }
+                }
+                if (divisores.length < 1) {
+                    document.getElementById("resultado").innerHTML = "Ele mesmo";
+                } else if (divisores.length < 2) {
+                    document.getElementById("resultado").innerHTML = divisores;
+                } else {
+                    let resultado = divisores.join(', ');
+                    let posicao = resultado.lastIndexOf(', ');
+                    resultado = `${resultado.substring(0, posicao)} e ${resultado.substring(posicao + 1)}.`;
+
+                    document.getElementById("resultado").innerHTML = resultado;
+                }
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
