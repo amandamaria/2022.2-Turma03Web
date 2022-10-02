@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Programação Estruturada</title>
+    </head>
+    <body>
+            <h1>Entrada do Programa</h1>
+            N1: <input type="number" id="a" value=""><br />
+            <button onclick='executarExercicio()'>OK</button>
+        <p id="resultado"></p>
+        <script>
+            function executarExercicio() {
+                var a = Number(document.getElementById('a').value);
+                
+                var r = " "
+                for (i = 1; i < a; i++) {
+                    if (a%i == 0) {
+                        r = r + " - " + i
+                    }
+                }
+
+                document.getElementById('resultado').innerHTML = r;
+            }
+        </script>
