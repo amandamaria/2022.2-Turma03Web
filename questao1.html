@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>JS - Arrays - Questão 1</h1>
+
+<button onclick='executarExercicio()'>Iniciar</button>
+<h3>Vetor Não Ordenado</h3>
+ <p id="naoOrdenado"></p>
+ <h3>Vetor Ordenado</h3>
+ <p id="ordenado"></p>
+ <script>
+ function executarExercicio() {
+    let a = criaVetor();
+    let b = a;
+   // b = b.sort(function(b, c){return b - c});
+    document.getElementById('naoOrdenado').innerHTML = "[" + a.toString() + "]";
+    document.getElementById('ordenado').innerHTML = "[" + b.sort(function(b, c){return b - c}).toString() + "]";
+ }
+
+function criaVetor(){
+    let numeros=[]
+
+    for(let i = 0; i < 10; i++){
+        numeros[i] = Number(prompt("Informe um número:"));
+    }
+
+    return numeros;
+}
+ </script>
+</body>
+</html>

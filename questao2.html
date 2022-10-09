@@ -1,0 +1,61 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>JS - Questão 2 - Arrays</h1>
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ // implemente a partir daqui
+// Exemplo de comando de entrada
+   var vetor = criaVetor();
+   var indicesOcorrencias = encontraOcorrencias(vetor);
+var r = 0; // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = indicesOcorrencias;
+ }
+
+ function criaVetor(){
+    var vetor = [], i = 0;
+    var a = Number(prompt("Informe um número:"));
+    do{
+        vetor[i] = a;
+        i++;
+        a = Number(prompt("Informe um número:"));
+    }while(a != 0);
+
+    return vetor;
+ }
+
+ function encontraOcorrencias(b){
+    var vetor = [], indice = 0;//, valor = 0, cont = 0, indice = 0;
+    /*for(var i = 0; i < b.length ; i++){
+        valor = b[i];
+        for(var j = 0; j < b.length ; j++){
+            if(valor == b[j]){
+                cont++;
+            }
+        }
+        vetor[indice] = valor + "-" + cont;
+        indice++;
+        cont = 0;
+    }*/
+    var indices = [];
+    var elemento = b[0];
+    var idx = b.indexOf(elemento);
+    for(var i = 1; i < b.length; i++){
+        while (idx != -1) {
+            indices.push(idx);
+            idx = b.indexOf(elemento, idx + 1);
+        }
+        elemento = b[i];
+        idx = b.indexOf(elemento);
+        vetor[indice] = indices;
+    }
+    return vetor;
+ }
+ </script>
+</body>
+</html>
