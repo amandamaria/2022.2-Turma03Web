@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>JS - Questão 3 - Arrays</h1>
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+ var matriz = new Array(2), soma = 0;
+
+ var matrizAlocada = alocarEspacos(matriz);
+
+ for (var i = 0; i < 2; i++) {
+     for (var j = 0; j < 3; j++){
+        matrizAlocada[i][j] = Number(prompt("Informe um número:"));
+     }
+ }
+ //console.log(matriz);
+ var a = Number(prompt("Informe a coluna:"));
+ for (var i = 0; i < 2; i++) {
+     for (var j = 0; j < 3; j++){
+        if(a == j){
+            soma += matrizAlocada[i][j];
+        }
+     }
+ }
+var r = soma; // atribua o resultado dos seus algoritmos a r
+document.getElementById('resultado').innerHTML = "A soma da coluna " + a + " da matriz " + " foi: " + r;
+ }
+ function alocarEspacos(m){
+    for(var i = 0; i < m.length; i++){
+        m[i] = new Array(3);
+    }
+    return m;
+ }
+ 
+ </script>
+</body>
+</html>
