@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q01</title>
+</head>
+
+<body>
+    <h1>Vetores</h1>
+
+    <button onclick="executar()">Clique Aqui</button>
+
+    <p id="resultado"></p>
+    
+    <script>
+        function executar() {
+            var vet = []
+            for (i = 0; i <= 9; i++) {
+                vet[i] = Number(prompt("Informe o " + (i + 1) + "º número:"));
+            }
+
+            document.getElementById('resultado').innerHTML = "Números informados: [" + vet.join(", ") + "]" + "<br> Vetor ordenados: [" + vet.sort(comparar).join(", ") + "]";
+        }
+
+        function comparar(a, b) {
+            return a - b;
+        }     
+    </script>
+</body>
+
+</html>

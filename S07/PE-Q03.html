@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q03</title>
+</head>
+
+<body>
+    <h1>Matrizes</h1>
+
+    <button onclick="executar()">Clique Aqui</button>
+    
+    <p id="resultado"></p>
+    
+    <script>
+        var mat = [[], [], [], [], [], [], [], [], [], []];
+
+        for (i = 0; i < 10; i++) {
+            for (j = 0; j < 5; j++) {
+                mat[i][j] = Number(prompt("Informe os elementos da matriz:"));
+            }
+        }
+
+        var col = Number(prompt("Informe uma coluna da sua matriz:"));
+        var soma = 0;
+
+        for (k = 0; k < 5; k++) {
+            soma += mat[k][col - 1];
+        }
+
+        var r = soma;
+
+        document.getElementById("resultado").innerHTML = r;
+    </script>
+</body>
+
+</html>

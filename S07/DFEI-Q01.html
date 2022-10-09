@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font: bolder;
+            margin: 10px;
+            padding: 25px;
+            background-color: rgb(241, 225, 255);
+        }
+
+        #layout {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 500px;
+            height: 300px;
+            border: solid rgb(40, 0, 69) 5px;
+            border-radius: 60px;
+            align-items: center;
+            color: beige;
+            background-color: rgba(137, 43, 226, 0.863);
+        }
+
+        h1{
+            margin: 20px;
+            padding: 30px;
+            text-decoration: underline;
+        }
+
+        audio{
+            width: 400px;
+            margin: 2px;
+            padding: 2px;
+        }
+    </style>
+    <title>DFEI - Q01</title>
+</head>
+
+<body>
+    <div id="layout">
+        <h1>Audio</h1>
+
+        <audio src="mídia/Kalimba.mp3" controls loop>
+            <p>O navegador não suporta aúdio.</p>
+        </audio>
+    </div>
+</body>
+</html>

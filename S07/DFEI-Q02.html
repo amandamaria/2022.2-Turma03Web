@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            width: 1160px;
+            height: 500px;
+            margin: 10px;
+            padding: 15px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border-bottom: solid 2px brown;
+            border-right: solid 2px brown;
+        }
+
+        #layout {
+            display: flex;
+        }
+
+        .video {
+            display: flex;
+            margin: 10px;
+            margin-top: 50px;
+        }
+
+        h1 {
+            margin: 10px;
+            padding: 15px;
+            display: flex;
+            font-weight: bolder;
+            font-size: 25pt;
+            color: brown;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+    <title>DFEI - Q02</title>
+</head>
+
+<body>
+        <h1>Vídeos</h1>
+        <div id="layout">
+            <div class="video">
+                <video width="560" height="315" src="mídia/sample-mp4-file.mp4" poster="mídia/urso.jpg" controls></video>
+            </div>
+            <div class="video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/fh5QD_4mRQw"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+</body>
+</html>

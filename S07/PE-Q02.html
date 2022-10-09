@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q02</title>
+</head>
+
+<body>
+    <h1>Vetores</h1>
+
+    <button onclick="executar()">Clique Aqui</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function executar() {
+            var vet = [];
+            var indice = [];
+            var x;
+            while (x != 0) {
+                x = Number(prompt("Informe um número:"));
+                vet.push(x);
+            }
+
+            var num = 0;
+            var max = 0;
+            var cont = 0;
+
+            for (i = 0; i < vet.length; i++) {
+                cont = 0;
+                for (let j = 0; j < vet.length; j++) {
+                    if (vet[i] == vet[j]) {
+                        cont++;
+                    }
+                }
+                if (cont > max) {
+                    max = cont;
+                    num = vet[i];
+                }
+            }
+            var resposta = "O número que mais se repetiu foi o " + num + "; nas posições: ";
+            for (j = 0; j < vet.length; j++) {
+                if (vet[j] == num) {
+                    resposta = resposta + "<br>" + j;
+                }
+            }
+            document.getElementById('resultado').innerHTML = resposta;
+        }   
+    </script>
+</body>
+
+</html>
