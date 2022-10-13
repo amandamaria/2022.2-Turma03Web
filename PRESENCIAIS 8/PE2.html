@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Programação Estruturada</title>
+</head>
+
+<body>
+    <h1>INICIAR PROGRAMA</h1>
+    <button onclick='receber()'>COMEÇAR</button>
+    <p id="resultado"></p>
+    <script>
+        var numeros = [];
+        var i = 0;
+        // função para receber o tamanho do array informado e imprimir 
+        function receber() {
+            var resultado = preencherArray(i);
+            document.getElementById('resultado').innerHTML = 'Vetor informado: [' + resultado + ']';
+        }
+        // função para preencer o array
+        function preencherArray(n) {
+            var a = Number(prompt("Informe um número:"));
+            if (a == 0) {
+                return numeros;
+            } else {                
+                numeros.push(a);
+                return preencherArray(n+1);
+            }
+
+        }
+    </script>
+</body>
+
+</html>
