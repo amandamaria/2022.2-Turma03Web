@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PE-Q01</title>
+</head>
+
+<body>
+    <h1>Arrays</h1>
+
+    <button onclick='executar()'>Clique Aqui</button>
+    <p id="resultado"></p>
+
+    <script>
+        function executar() {
+            var a = Number(prompt("Informe a quantidade de números:"));
+            var r = [];
+
+            function array(min,max){
+                var num = Number(prompt("Informe o " + (min+1) + "º número: "));
+                r.push(num);
+                if (min < max){
+                    array(++min,max)
+                }
+            }
+            array(0,a-1)
+            document.getElementById('resultado').innerHTML = ("Array: ["+r.join(", ") + "]");
+        }
+    </script>
+</body>
+
+</html>

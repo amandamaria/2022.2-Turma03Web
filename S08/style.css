@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    background-color: azure;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+header {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        background-color: black;
+        height: 40px;
+        color: white;
+        margin: 0;
+        padding: 15px;
+        font-size: 13pt;
+    }
+
+    img {
+        display: none;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 0%;
+    }
+}
+
+section {
+    display: flex;
+}
+
+h1 {
+    font-size: 26pt;
+}
+
+article {
+    padding: 10px;
+    margin: 15px;
+}
+
+article #primeiro:first-letter{
+    font-size: 50px;
+}
+
+a:link {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.menu {
+    list-style: none;
+    padding: 15px;
+    margin: auto;
+}
+
+.menu :hover {
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+ul>a:link {
+    font-size: 13pt;
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    background-color: lightblue;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+nav:hover {
+    background-color: white;
+}
+
+footer {
+    display: flex;
+    background-color: gray;
+    height: 40px;
+    padding: 10px;
+}
+
+footer>a:link {
+    color: white;
+    margin: auto;
+}
