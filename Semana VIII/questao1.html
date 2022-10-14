@@ -1,0 +1,39 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<h4>Insira a quantidade de valores a serem inseridos: </h4><input id="a" type="number"></input>
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <p id="resultadoInverso"> </p>
+ <script>
+ function executarExercicio() {
+var vet = [];
+var a = Number(document.getElementById('a').value);
+var r = insereRecursivo(a, vet); 
+
+document.getElementById('resultadoInverso').innerHTML = "Vetor na ordem inversa: "+ r;
+ }
+
+
+function insereRecursivo(a, vet){
+	if(a == 0){
+		console.log("Caso base:" + vet);
+		document.getElementById('resultado').innerHTML = "Vetor na ordem original: " + vet;
+		return vet.reverse();
+	}
+	else{
+		var valor = Number(prompt("Informe um número"));
+		console.log("Indice " + a);
+		console.log("Valor " + valor);
+		vet.push(valor);
+		a--;
+		return insereRecursivo(a, vet);
+	}
+ }
+ </script>
+</body>
+</html>

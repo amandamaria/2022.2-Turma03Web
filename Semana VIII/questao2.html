@@ -1,0 +1,37 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Programação Estruturada</title>
+</head>
+<body>
+<h1>Entrada do Programa</h1>
+<input id="a" type="number"> </input>
+<button onclick='executarExercicio()'>OK</button>
+ <p id="resultado"></p>
+ <script>
+ function executarExercicio() {
+var vet = [];
+var a = Number(document.getElementById('a').value);
+var r = insereRecursivo(a, vet); 
+
+document.getElementById('resultado').innerHTML = r;
+
+//var c = imprimeVetor(r, r.size() - 1);
+ }
+
+
+function insereRecursivo(a, vet){
+	if(a == 0){
+		console.log("Caso base:" + vet);
+		return vet;
+	}
+	else{
+		console.log(vet);
+		vet.push(a);
+		a = Number(prompt("Informe um número"));
+		return insereRecursivo(a, vet);
+	}
+ }
+ </script>
+</body>
+</html>
