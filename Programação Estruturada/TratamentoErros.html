@@ -1,0 +1,117 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Programação Estruturada</title>
+</head>
+	<body>
+		<h1>Média das Notas</h1>
+			Nota 1: 
+				<input type="text" id="n1">
+					<br />
+			Nota 2:
+				<input type="text" id="n2"> 
+					<br />
+			Nota 3: 
+				<input type="text" id="n3"> 
+					<br />
+		<button onclick='imprimirNaTela()'> OK </button>
+			<p id="resultado"></p>
+
+		<script>
+			function imprimirNaTela(){
+
+				var primeiraNota = Number(document.getElementById('n1').value);
+				var segundaNota = Number(document.getElementById('n2').value);
+				var terceiraNota = Number(document.getElementById('n3').value);
+
+				var verifica = obterValor(primeiraNota, segundaNota, terceiraNota);
+				
+				var resultado = calcularMedia(primeiraNota, segundaNota, terceiraNota);
+
+				if(verifica != null){
+					document.getElementById('resultado').innerHTML = verifica;
+				}
+				else if(resultado != null){
+					document.getElementById('resultado').innerHTML = resultado;
+				}
+			
+			}
+
+			function calcularMedia(nota1, nota2, nota3){
+				var media = (nota1 + nota2 + nota3) / 3;
+				var resultado = "";
+				console.log(media);
+
+				 try{
+
+				 	if(media > 0.0 && media <= 10.0){
+					 	if(media >= 7) {	
+							resultado = "Aprovado com média " + media;
+						}
+						else if(media >= 3) {
+							resultado = "Aluno em recuperação, pois a média foi " + media;
+						}
+						else{
+							resultado = "Aluno reprovado, pois ficou com média " + media;
+						}
+					}
+					else{
+						resultado = verificarResultado(media);
+					}
+
+				 }
+				 catch(erro){
+				 	return erro;
+				 }
+
+				 return resultado;
+			}
+
+
+			function obterValor(nota1, nota2, nota3){
+				console.log("Função obterValor", nota1);
+
+				try{
+					console.log("fora do if", nota1);
+					if( nota1 == null || nota2 == null || nota3 == null
+					 || nota1 == undefined || nota2 == undefined || nota3 == undefined ) {
+
+						var nameError = "Value Nullable: ";
+						var description = "É necessário inserir algum valor.";
+						throw new Error(nameError + description);
+
+					}
+					else if( (nota1 < 0.0 || nota1 > 10.0) || (nota2 < 0.0 || nota2 > 10.0) || (nota3 < 0.0 || nota3 > 10.0) ){
+
+						var nameError = "Value Invalid: ";
+						var description = "A nota deve ser maior que 0.0 e menor que 10.0";
+						throw new Error(nameError + description);
+
+					}
+
+				}
+				catch(erro){
+					return erro;
+				}
+			}
+
+			function verificarResultado(media){
+				console.log("VerificarResultado", media);
+				try{
+
+					if(media < 0.0 || media >= 10.0){
+
+						var nameError = "Média Inválida: "
+						var description = "O valor encontra-se fora do intervalo (0.0 - 10.0)"
+						throw new Error(nameError + description);
+
+					}
+
+				}
+				catch(erro) {
+					return erro;
+				}
+			}
+		</script>
+	</body>
+</html>
