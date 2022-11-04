@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8" />
+ <title>Sobre</title>
+ </head>
+ <body>
+ <h1>Sobre</h1>
+ <ul>
+ <li>Nome: <span id="nome"></span></li>
+ <li>Idade: <span id="idade"></span></li>
+ <li>Cidade: <span id="cidade"></span></li>
+ </ul>
+
+ <script type="text/javascript">
+     const body = document.querySelector('body');
+     //body.style.font-family = "Arial, sans-serif";
+
+     const spanNome = document.getElementById('nome');
+     spanNome.innerHTML = "Ítalo Maciel de Paiva";
+
+     const spanIdade = document.getElementById('idade');
+     spanIdade.innerHTML = "23 anos";
+
+     const spanCidade = document.getElementById('cidade');
+     spanCidade.innerHTML = "Natal";
+
+     for(let i = 0; i <=2; i++){
+        const lista = document.querySelector('ul').children[i];  
+        lista.style.color = 'red'; 
+     }
+
+     const img = document.createElement('img');
+     body.appendChild(img);
+     body.style.padding = '5%';
+
+     img.setAttribute('src', 'img/myImage.jpeg');
+     img.style.width = '150px';
+
+
+ </script>
+ </body>
+</html>
