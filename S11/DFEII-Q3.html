@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DFEII-Q3</title>
+</head>
+<body>
+    <h1>Sobre</h1> 
+
+    <ul>
+        <li>Nome: <span id="nome"></span></li>
+        <li>Idade: <span id="idade"></span></li>
+        <li>Cidade: <span id="cidade"></span></li> 
+    </ul>
+
+    <script>
+        const body = document.querySelector('body');
+        body.style.fontFamily = 'Arial, sans-serif';
+
+        document.getElementById('nome').innerHTML="Talita";
+        document.getElementById('idade').innerHTML="29";
+        document.getElementById('cidade').innerHTML="Natal";
+
+        const li = document.querySelectorAll('li');
+        li.forEach(function(item){
+            item.style.color = 'red';
+        });
+
+        const image = document.createElement('img');
+        image.setAttribute('src', 'https://st2.depositphotos.com/1005147/5192/i/450/depositphotos_51926417-stock-photo-hands-holding-the-sun-at.jpg');
+        body.appendChild(image)
+    </script>    
+</body>
+</html>
