@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    </head>
+    </head>
+    <body>
+        <body>
+            
+            <div class="container">
+                <h1>Vídeos mais vistos do Youtube</h1>
+                <div class="list-group" id="principal">
+                    <a href="https://www.youtube.com/watch?v=XqZsoesa55w" class="list-group-item list-group-item-action"> Baby Shark Dance</a>
+                </div>
+            </div>
+            
+            <script> 
+            
+                var videos = '{ "mais vistos" : [' 
+                + '{ "youtubeId": "hT_nvWreIhg", "title": "Counting Stars" },' 
+                + '{ "youtubeId": "YQHsXMglC9A", "title": "Hello" },' 
+                + '{ "youtubeId": "09R8_2nJtjg", "title": "Sugar" },' 
+                + '{ "youtubeId": "pRpeEdMmmQ0", "title": "Waka Waka" } ]}';
+
+                var objeto = JSON.parse(videos);
+
+                for (i=0; i<=3; i++){
+                    const x = objeto["mais vistos"][i];
+                    console.log(x);
+                    const a = document.createElement('a');
+                    a.href = "https://www.youtube.com/watch?v=" + x.youtubeId;
+                    a.innerHTML = x.title;
+                    a.classList.add("list-group-item", "list-group-item-action");
+                    document.getElementById('principal').appendChild(a);
+                }
+        </script>
+    </body>
+</html>
