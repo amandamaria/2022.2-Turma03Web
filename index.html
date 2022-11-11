@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Vídeos mais vistos do Youtube</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Vídeos mais vistos do Youtube</h1>
+        <div class="list-group" id="principal">
+            <a href="https://www.youtube.com/watch?v=XqZsoesa55w" class="list-group-item listgroup-item-action">
+                Baby Shark Dance
+            </a>
+        </div>
+    </div>
+    <script>
+        var videos =
+            '{ "mais vistos" : [' +
+            '{ "youtubeId": "hT_nvWreIhg", "title": "Counting Stars" },' +
+            '{ "youtubeId": "YQHsXMglC9A", "title": "Hello" },' + 
+            '{ "youtubeId": "09R8_2nJtjg", "title": "Sugar" },' +
+            '{ "youtubeId": "pRpeEdMmmQ0", "title": "Waka Waka" } ]}';
+        
+        var obj = JSON.parse(videos);
+
+
+        const div = document.querySelector("#principal");
+
+        obj["mais vistos"].forEach((dado) => {
+                const novoLink = document.createElement('a');
+                novoLink.setAttribute('href', `https://www.youtube.com/watch?v=${dado.youtubeId}`)
+                novoLink.textContent = `${dado.title}`
+        
+                div.appendChild(novoLink);
+        });
+
+    </script>
+</body>
+
+</html>
