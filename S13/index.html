@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AJAX</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    </head>
+</head>
+<body>
+    <body>
+        <div class="container">
+            <h1>Vídeos mais vistos do Youtube</h1>
+            <div class="list-group" id="principal">
+                <a href="https://www.youtube.com/watch?v=XqZsoesa55w" class="list-group-item list-group-item-action">
+                    Baby Shark Dance
+                </a>
+            </div>
+        </div>
+        <script>
+
+            var link = "https://api.jsonbin.io/v3/b/6374e8f52b3499323b018364";
+
+            var requisicao = new XMLHttpRequest();
+                requisicao.onload = manipulaResposta;
+                requisicao.open('GET', link, true);
+                requisicao.send();
+
+            function manipulaResposta() {
+                var videosObj = JSON.parse(requisicao.responseText);
+
+                var mainDiv = document.querySelector("#principal");
+
+                var adicionarVideoNaLista = function (video) {
+                    var link = document.createElement("a");
+                    link.classList.add("list-group-item", "list-group-item-action");
+                    link.innerHTML = video.title;
+                    link.setAttribute(
+                        "href",
+                        "https://www.youtube.com/watch?v=" + video.youtubeId
+                        );
+                        mainDiv.appendChild(link);
+                    };
+
+                    videosObj.record["mais vistos"].forEach((video) => {
+                        adicionarVideoNaLista(video);
+                    });
+
+                    console.log(videosObj);
+                }
+        </script>
+    </body>
+</html>
