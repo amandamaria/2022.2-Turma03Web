@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Vídeos mais vistos do Youtube</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Vídeos mais vistos do Youtube</h1>
+        <div class="list-group" id="principal">
+            <a href="https://www.youtube.com/watch?v=XqZsoesa55w" class="list-group-item listgroup-item-action">
+                Baby Shark Dance
+            </a>
+        </div>
+    </div>
+    <script>
+        var requisicao = new XMLHttpRequest();
+        requisicao.onload = manipulaResposta;
+        let url = "https://api.jsonbin.io/v3/b/6374e8f52b3499323b018364"
+        requisicao.open('GET', url, true);
+        requisicao.send();
+
+        function manipulaResposta(){
+            var response = JSON.parse(requisicao.responseText);
+            console.log(requisicao.responseText);
+
+            const div = document.querySelector("#principal");
+
+            response["record"]["mais vistos"].forEach((dado) => {
+                    const novoLink = document.createElement('a');
+                    novoLink.classList.add("list-group-item", "list-group-item-action");
+                    novoLink.setAttribute('href', `https://www.youtube.com/watch?v=${dado.youtubeId}`)
+                    novoLink.textContent = `${dado.title}`
+
+                    div.appendChild(novoLink);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
